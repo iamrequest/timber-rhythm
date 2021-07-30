@@ -3,8 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LoopMachine : MonoBehaviour {
+    public static LoopMachine Instance { get; private set; }
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Debug.LogError("Multiple LoopManager components detected. This is probably a bug.");
+            Destroy(this);
+        }
+    }
+
+
     public bool isPlaying;
 
+    [Header("Tempo")]
     [Range(1, 300)]
     public int bpm = 120;
 
@@ -14,13 +26,24 @@ public class LoopMachine : MonoBehaviour {
 
     [Range(0f, 1f)]
     public float t;
+    private float previousT;
 
     private float elapsedTime, measureDuration;
 
 
+    [Header("Loop Section")]
+    public List<LoopSection> loopSections;
+    public LoopSection activeLoopSection;
+
     private void Update() {
         if (isPlaying) {
+            // Figure out how much time passed between this frame and the last
             CalculateElapsedTime();
+
+            // Play all notes for the active section, that exist between the supplied time values
+            if (activeLoopSection) {
+                activeLoopSection.PlayNotes(previousT, t);
+            }
         }
     }
 
@@ -34,18 +57,37 @@ public class LoopMachine : MonoBehaviour {
         // TODO: Probably can move this somewhere else, so I'm not calculating it every frame
         measureDuration = 60f / ((float)bpm / (float)beatsPerBar);
 
+        previousT = t;
         if (elapsedTime >= measureDuration) {
             elapsedTime = 0f;
         }
         t = elapsedTime / measureDuration;
     }
 
-    public void Play() {
+    public void ResetMeasure() {
         elapsedTime = 0f;
+        t = 0f;
+    }
+
+    public void Play() {
         isPlaying = true;
     }
     public void Pause() {
-        elapsedTime = 0f;
         isPlaying = false;
+    }
+    public void Stop() {
+        isPlaying = false;
+        ResetMeasure();
+    }
+
+    public void SetActiveLoopSection(LoopSection newLoopSection) {
+        activeLoopSection = newLoopSection;
+        ResetMeasure();
+    }
+
+    public LoopSection CreateNewSection() {
+        LoopSection newSection = gameObject.AddComponent<LoopSection>();
+        loopSections.Add(newSection);
+        return newSection;
     }
 }
