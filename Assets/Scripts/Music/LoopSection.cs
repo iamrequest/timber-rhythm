@@ -5,6 +5,10 @@ using UnityEngine;
 public class LoopSection : MonoBehaviour {
     public List<LoopRecording> recordings;
 
+    private void Awake() {
+        if (recordings == null) recordings = new List<LoopRecording>();
+    }
+
     /// <summary>
     /// Play the notes that take place between the supplied time percentages, for all loop recordings in this section
     /// </summary>
@@ -21,7 +25,7 @@ public class LoopSection : MonoBehaviour {
         LoopMachine.Instance.loopSections.Remove(this);
 
         if (LoopMachine.Instance.activeLoopSection == this) {
-            LoopMachine.Instance.activeLoopSection = null;
+            LoopMachine.Instance.SetActiveLoopSection(null);
         }
 
 

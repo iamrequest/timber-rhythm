@@ -12,9 +12,14 @@ public class LoopMachine : MonoBehaviour {
             Destroy(this);
         }
     }
+    private void Start() {
+        if (activeLoopSection == null) activeLoopSection = CreateNewSection();
+    }
 
 
     public bool isPlaying;
+    public bool isRecording, isRecordingQueued;
+    public LoopRecording recordingInProgress;
 
     [Header("Tempo")]
     [Range(1, 300)]
@@ -22,18 +27,20 @@ public class LoopMachine : MonoBehaviour {
 
     // TODO: This works when the beat unit of the time signature (lower number) is quarter notes (regardless of the number of beats per bar). 
     [Range(1, 12)]
-    public int beatsPerBar = 4;
+    public int beatsPerMeasure = 4;
+    [Range(1, 12)]
+    public int measuresPerLoop = 1;
 
     [Range(0f, 1f)]
     public float t;
     private float previousT;
 
-    private float elapsedTime, measureDuration;
+    private float elapsedTime, measureDuration, loopDuration;
 
 
     [Header("Loop Section")]
     public List<LoopSection> loopSections;
-    public LoopSection activeLoopSection;
+    public LoopSection activeLoopSection { get; private set; }
 
     private void Update() {
         if (isPlaying) {
@@ -55,13 +62,18 @@ public class LoopMachine : MonoBehaviour {
 
         // Calculate the duration of the whole bar, just in case the BPM updates.
         // TODO: Probably can move this somewhere else, so I'm not calculating it every frame
-        measureDuration = 60f / ((float)bpm / (float)beatsPerBar);
+        measureDuration = 60f / ((float)bpm / (float)beatsPerMeasure);
+        loopDuration = measureDuration * measuresPerLoop;
 
         previousT = t;
-        if (elapsedTime >= measureDuration) {
+        if (elapsedTime >= loopDuration) {
             elapsedTime = 0f;
+
+            // If we're getting ready to record next measure, then start recording.
+            if (isRecording) SaveRecording();
+            if (isRecordingQueued) StartRecording();
         }
-        t = elapsedTime / measureDuration;
+        t = elapsedTime / loopDuration;
     }
 
     public void ResetMeasure() {
@@ -82,6 +94,19 @@ public class LoopMachine : MonoBehaviour {
 
     public void SetActiveLoopSection(LoopSection newLoopSection) {
         activeLoopSection = newLoopSection;
+
+        // Never allow for a null active section.
+        if (activeLoopSection == null) {
+            if (loopSections.Count > 0) {
+                // If more exist, pick the first available one
+                activeLoopSection = loopSections[0];
+            } else {
+                // Otherwise, create a new one.
+                activeLoopSection = CreateNewSection();
+            }
+        }
+
+        // TODO: This may change if I allow users to queue up a new section later
         ResetMeasure();
     }
 
@@ -89,5 +114,20 @@ public class LoopMachine : MonoBehaviour {
         LoopSection newSection = gameObject.AddComponent<LoopSection>();
         loopSections.Add(newSection);
         return newSection;
+    }
+
+    private void StartRecording() {
+        isRecording = true;
+        isRecordingQueued = false;
+
+        // TODO: Confirm that recordingInProgress.notes[] gets initialized during build
+        recordingInProgress = gameObject.AddComponent<LoopRecording>();
+        recordingInProgress.parentLoopSection = activeLoopSection;
+    }
+    private void SaveRecording() {
+        isRecording = false;
+
+        activeLoopSection.recordings.Add(recordingInProgress);
+        recordingInProgress = null;
     }
 }

@@ -9,6 +9,8 @@ public class ImpactNote : MonoBehaviour {
     [Range(0f, 1f)]
     public float playTime;
 
+    public NoteSource noteSource;
+
     public void Play() {
         // TODO
         Debug.Log("Playing note", this);

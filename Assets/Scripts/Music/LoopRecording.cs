@@ -7,6 +7,18 @@ public class LoopRecording : MonoBehaviour {
     public LoopSection parentLoopSection;
     public List<ImpactNote> notes;
 
+    private void Awake() {
+        if (notes == null) notes = new List<ImpactNote>();
+    }
+
+    public void AddNote(NoteSource noteSource, float t) {
+        ImpactNote newNote = gameObject.AddComponent<ImpactNote>();
+        newNote.noteSource = noteSource;
+        newNote.playTime = t;
+
+        notes.Add(newNote);
+    }
+
     public void PlayNotes(float startT, float endT) {
         foreach (ImpactNote note in notes) {
             if (note.playTime > startT && note.playTime <= endT) {

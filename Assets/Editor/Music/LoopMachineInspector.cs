@@ -21,6 +21,9 @@ public class LoopMachineInspector : Editor {
             if (GUILayout.Button("Stop", EditorStyles.miniButtonMid)) {
                 loopMachine.Stop();
             }
+            if (GUILayout.Button("Queue Recording", EditorStyles.miniButtonMid)) {
+                loopMachine.isRecordingQueued = true;
+            }
             GUILayout.EndHorizontal();
 
 
