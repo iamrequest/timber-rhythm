@@ -63,7 +63,12 @@ public class SustainedNote: BaseNote {
             StopCoroutine(stopPlayingAudioCoroutine);
         }
 
-        audioSource.clip = audioClip;
+        if (audioClip == null) {
+            // Caching just in case, this should never be null unless I'm doing something in the inspector
+            audioClip = sustainedNoteSource.GetAudioClip();
+        } else {
+            audioSource.clip = audioClip;
+        }
         audioSource.volume = 0f; // Setting this to prevent weird clicking noise at the beginning of the audio
         audioSource.Play();
     }

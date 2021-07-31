@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: square_25
   m_EditorClassIdentifier: 
   skipSustain: 0
-  attackDuration: 0.064
-  releaseDuration: 0.654
+  attackDuration: 0.1
+  releaseDuration: 0.1
   octaves:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 0b47ae4b077a6d1429b390bb7be6022d, type: 2}
   - {fileID: 11400000, guid: 8ce010dcc8c1e0a4c8b75596192f04ea, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 47aee5e204ae72442a0ece8419cad37a, type: 2}
   - {fileID: 0}

@@ -59,4 +59,14 @@ public class SustainedNoteSource : NoteSource {
             LoopMachine.Instance.recordingInProgress.RecordNote(note, noteStartT, noteEndT);
         }
     }
+
+    public AudioClip GetAudioClip() {
+        // Fetch the audio clip to use
+        if (!soundLibrary.octaves[octave - 1]) {
+            Debug.LogError("Sound library isn't initialized properly");
+            return null;
+        }
+
+        return soundLibrary.octaves[octave - 1].GetNote(noteName);
+    }
 }
