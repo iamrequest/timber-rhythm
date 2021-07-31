@@ -5,9 +5,10 @@ using UnityEditor;
 
 [CustomEditor(typeof(LoopRecording))]
 public class LoopRecordingInspector : Editor {
-    private float t;
-    private float velocity;
-    private NoteSource noteSource;
+    private float startT = 0.25f, endT = 0.75f;
+    private float velocity = 0.75f;
+    private ImpactNoteSource impactNoteSource;
+    private SustainedNoteSource sustainedNoteSource;
 
     public override void OnInspectorGUI() {
         base.OnInspectorGUI();
@@ -18,18 +19,24 @@ public class LoopRecordingInspector : Editor {
             EditorGUILayout.Space();
             GUILayout.Label("Add Notes");
 
-            t = EditorGUILayout.Slider("t", t, 0f, 1f);
+            EditorGUILayout.MinMaxSlider("t", ref startT, ref endT, 0f, 1f);
             velocity = EditorGUILayout.Slider("velocity", velocity, 0f, 1f);
-            noteSource = EditorGUILayout.ObjectField("Note Source", noteSource, typeof(NoteSource), true) as NoteSource;
 
-            if (GUILayout.Button("Add to Recording", EditorStyles.miniButtonLeft)) {
-                ImpactNote newNote = recording.gameObject.AddComponent<ImpactNote>();
-                newNote.playTime = t;
-                newNote.noteSource = noteSource;
-                newNote.velocity = velocity;
+            GUILayout.BeginHorizontal();
+            impactNoteSource = EditorGUILayout.ObjectField("Impact Note Source", impactNoteSource, typeof(ImpactNoteSource), true) as ImpactNoteSource;
 
-                recording.notes.Add(newNote);
+            if (GUILayout.Button("Add to recording", EditorStyles.miniButtonLeft)) {
+                recording.RecordNote(impactNoteSource.note, startT, endT);
             }
+            GUILayout.EndHorizontal();
+
+            GUILayout.BeginHorizontal();
+            sustainedNoteSource = EditorGUILayout.ObjectField("Sustained Note Source", sustainedNoteSource, typeof(SustainedNoteSource), true) as SustainedNoteSource;
+
+            if (GUILayout.Button("Add to recording", EditorStyles.miniButtonRight)) {
+                recording.RecordNote(sustainedNoteSource.note, startT, endT);
+            }
+            GUILayout.EndHorizontal();
         }
     }
 }

@@ -7,7 +7,8 @@ using Freya;
 /// A sustained note. Right now, there is only support for attack/sustain/release (ie: no decay).
 /// </summary>
 [RequireComponent(typeof(AudioSource))]
-public class SustainedNote: MonoBehaviour {
+public class SustainedNote: BaseNote {
+    // TODO: Replace this with some pooling situation. I don't think I can hook it up to HVR's SFXManager, since I don't have access to its AudioSources
     private AudioSource audioSource;
 
     // Used to calculate volume between attack/release
@@ -17,9 +18,6 @@ public class SustainedNote: MonoBehaviour {
 
     public bool isPlaying { get; private set; }
 
-    public AudioClip audioClip;
-
-    public float velocity;
     public float attackDuration, releaseDuration;
 
 
@@ -40,7 +38,7 @@ public class SustainedNote: MonoBehaviour {
         }
     }
 
-    public void StartNote() {
+    public override void PlayNote () {
         timer = 0f;
         isPlaying = true;
 
@@ -53,7 +51,7 @@ public class SustainedNote: MonoBehaviour {
         audioSource.Play();
     }
 
-    public void StopNote() {
+    public override void StopNote() {
         if (!isPlaying) return;
 
         timer = 0f;
@@ -67,5 +65,12 @@ public class SustainedNote: MonoBehaviour {
     private IEnumerator DoStopAudioSource(float delay) {
         yield return new WaitForSeconds(delay);
         audioSource.Stop();
+    }
+
+    public void Copy(SustainedNote sustainedNote) {
+        base.Copy(sustainedNote);
+
+        attackDuration = sustainedNote.attackDuration;
+        releaseDuration = sustainedNote.releaseDuration;
     }
 }

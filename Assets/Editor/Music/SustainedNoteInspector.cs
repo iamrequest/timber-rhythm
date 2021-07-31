@@ -9,17 +9,17 @@ public class SustainedNoteInspector : Editor {
         base.OnInspectorGUI();
 
         if (Application.isPlaying) {
-            SustainedNote sustainedNote = target as SustainedNote;
+            SustainedNote note = target as SustainedNote;
 
             EditorGUILayout.Space();
             GUILayout.Label("Manage Note");
 
             if (GUILayout.Button("Start Note", EditorStyles.miniButtonLeft)) {
-                sustainedNote.StartNote();
+                note.PlayNote();
             } 
 
             if (GUILayout.Button("Stop Note", EditorStyles.miniButtonLeft)) {
-                sustainedNote.StopNote();
+                note.StopNote();
             } 
         }
     }

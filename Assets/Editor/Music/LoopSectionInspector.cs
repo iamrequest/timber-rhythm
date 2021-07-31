@@ -45,7 +45,6 @@ public class LoopSectionInspector : Editor {
             if (GUILayout.Button("+", EditorStyles.miniButtonLeft)) {
                 LoopRecording loopRecording = loopSection.gameObject.AddComponent<LoopRecording>();
                 loopRecording.parentLoopSection = loopSection;
-                loopRecording.notes = new List<ImpactNote>();
 
                 loopSection.recordings.Add(loopRecording);
             }

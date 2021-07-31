@@ -5,27 +5,44 @@ using UnityEngine;
 public class LoopRecording : MonoBehaviour {
     public bool isMuted;
     public LoopSection parentLoopSection;
-    public List<ImpactNote> notes;
+    public List<BaseNote> notes;
 
     private void Awake() {
-        if (notes == null) notes = new List<ImpactNote>();
+        if (notes == null) notes = new List<BaseNote>();
     }
 
-    public void RecordNote(ImpactNote originalNote, float t) {
+    public void RecordNote(BaseNote originalNote, float startT, float endT) {
         // Take a shallow copy of this note
-        ImpactNote newNote = gameObject.AddComponent<ImpactNote>();
-        newNote.noteSource = originalNote.noteSource;
-        newNote.velocity = originalNote.velocity;
-        newNote.soundClipIndex = originalNote.soundClipIndex;
-        newNote.playTime = t;
+        // There's probably a better OOP way of doing this
+        ImpactNote originalImpactNote = originalNote as ImpactNote;
+        if (originalImpactNote) {
+            ImpactNote newNote = gameObject.AddComponent<ImpactNote>();
+            newNote.Copy(originalImpactNote);
 
-        notes.Add(newNote);
+            newNote.playTime = startT;
+            newNote.stopTime = endT;
+
+            notes.Add(newNote);
+        } else {
+            SustainedNote originalSustainedNote = originalNote as SustainedNote;
+            SustainedNote newNote = gameObject.AddComponent<SustainedNote>();
+            newNote.Copy(originalSustainedNote);
+
+            newNote.playTime = startT;
+            newNote.stopTime = endT;
+
+            notes.Add(newNote);
+        }
     }
 
     public void PlayNotes(float startT, float endT) {
-        foreach (ImpactNote note in notes) {
+        foreach (BaseNote note in notes) {
             if (note.playTime > startT && note.playTime <= endT) {
-                note.Play();
+                note.PlayNote();
+            }
+
+            if (note.stopTime > startT && note.stopTime <= endT) {
+                note.StopNote();
             }
         }
     }
@@ -44,7 +61,7 @@ public class LoopRecording : MonoBehaviour {
                 return;
             }
 
-            ImpactNote note = notes[notes.Count - 1];
+            BaseNote note = notes[notes.Count - 1];
             notes.Remove(note);
             Destroy(note);
         }
