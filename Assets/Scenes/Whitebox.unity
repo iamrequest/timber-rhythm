@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1aa912475784546bfb74d7191e9a3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 73ddb66442d3ddb49bc9a814b50004c3, type: 3}
+  audioClip: {fileID: 8300000, guid: 88c85579e7c3ab145b45ba980260a972, type: 3}
   velocity: 1
   attackDuration: 1
   releaseDuration: 1
@@ -1016,7 +1016,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eb297ba9d6987fa41b6b4a2980641bc0, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
