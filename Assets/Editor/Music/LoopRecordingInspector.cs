@@ -18,16 +18,9 @@ public class LoopRecordingInspector : Editor {
             EditorGUILayout.Space();
             GUILayout.Label("Add Notes");
 
-            GUILayout.BeginVertical();
             t = EditorGUILayout.Slider("t", t, 0f, 1f);
-            GUILayout.EndVertical();
-            GUILayout.BeginVertical();
             velocity = EditorGUILayout.Slider("velocity", velocity, 0f, 1f);
-            GUILayout.EndVertical();
-
-            GUILayout.BeginVertical();
             noteSource = EditorGUILayout.ObjectField("Note Source", noteSource, typeof(NoteSource), true) as NoteSource;
-            GUILayout.EndVertical();
 
             if (GUILayout.Button("Add to Recording", EditorStyles.miniButtonLeft)) {
                 ImpactNote newNote = recording.gameObject.AddComponent<ImpactNote>();

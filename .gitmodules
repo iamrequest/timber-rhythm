@@ -1,0 +1,3 @@
+[submodule "Assets/Mathfs"]
+	path = Assets/Mathfs
+	url = git@github.com:FreyaHolmer/Mathfs.git
