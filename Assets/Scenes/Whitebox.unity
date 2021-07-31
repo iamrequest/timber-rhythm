@@ -299,6 +299,7 @@ MonoBehaviour:
   noiseMakingLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+  note: {fileID: 0}
   soundLibrary: {fileID: 11400000, guid: 6b34416d6885c3f44b57b02119e3fa3a, type: 2}
 --- !u!54 &396492601
 Rigidbody:
@@ -403,10 +404,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteSource: {fileID: 0}
+  audioClip: {fileID: 0}
   playTime: 0
   stopTime: 0
   velocity: 0.5
-  audioClip: {fileID: 0}
 --- !u!1001 &411037816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1004,12 +1005,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteSource: {fileID: 0}
+  audioClip: {fileID: 0}
   playTime: 0
   stopTime: 0
   velocity: 1
-  audioClip: {fileID: 8300000, guid: 88c85579e7c3ab145b45ba980260a972, type: 3}
-  attackDuration: 1
-  releaseDuration: 1
+  sustainedNoteSource: {fileID: 0}
 --- !u!82 &1287985076
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1211,6 +1211,10 @@ MonoBehaviour:
   noiseMakingLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+  note: {fileID: 0}
+  soundLibrary: {fileID: 11400000, guid: 0362ea8682f426645bbc573b9dee4700, type: 2}
+  octave: 3
+  noteName: 0
 --- !u!1 &1390079036
 GameObject:
   m_ObjectHideFlags: 0

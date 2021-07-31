@@ -10,6 +10,7 @@ using Freya;
 public class SustainedNote: BaseNote {
     // TODO: Replace this with some pooling situation. I don't think I can hook it up to HVR's SFXManager, since I don't have access to its AudioSources
     private AudioSource audioSource;
+    public SustainedNoteSource sustainedNoteSource;
 
     // Used to calculate volume between attack/release
     private float timer;
@@ -18,12 +19,11 @@ public class SustainedNote: BaseNote {
 
     public bool isPlaying { get; private set; }
 
-    public float attackDuration, releaseDuration;
-
 
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
         audioSource.loop = true;
+        sustainedNoteSource = noteSource as SustainedNoteSource;
     }
 
     private void Update() {
@@ -31,9 +31,17 @@ public class SustainedNote: BaseNote {
             timer += Time.deltaTime;
 
             if (isPlaying) {
-                audioSource.volume = Mathfs.RemapClamped(0f, attackDuration, 0f, velocity, timer);
+                audioSource.volume = Mathfs.RemapClamped(0f, 
+                    sustainedNoteSource.soundLibrary.attackDuration, 
+                    0f, 
+                    velocity, 
+                    timer);
             } else {
-                audioSource.volume = Mathfs.RemapClamped(0f, attackDuration, 0f, preReleaseVolume, releaseDuration - timer);
+                audioSource.volume = Mathfs.RemapClamped(0f, 
+                    sustainedNoteSource.soundLibrary.attackDuration, 
+                    0f, 
+                    preReleaseVolume, 
+                    sustainedNoteSource.soundLibrary.releaseDuration - timer);
             }
         }
     }
@@ -59,7 +67,7 @@ public class SustainedNote: BaseNote {
         preReleaseVolume = audioSource.volume;
 
         // Make the audio source stop playing after some duration
-        stopPlayingAudioCoroutine = StartCoroutine(DoStopAudioSource(releaseDuration));
+        stopPlayingAudioCoroutine = StartCoroutine(DoStopAudioSource(sustainedNoteSource.soundLibrary.releaseDuration));
     }
 
     private IEnumerator DoStopAudioSource(float delay) {
@@ -70,7 +78,6 @@ public class SustainedNote: BaseNote {
     public void Copy(SustainedNote sustainedNote) {
         base.Copy(sustainedNote);
 
-        attackDuration = sustainedNote.attackDuration;
-        releaseDuration = sustainedNote.releaseDuration;
+        sustainedNoteSource.soundLibrary = sustainedNote.sustainedNoteSource.soundLibrary;
     }
 }
