@@ -36,6 +36,15 @@ public class SustainedNote: BaseNote {
                     0f, 
                     velocity, 
                     timer);
+
+
+                // If we want to skip the sustain step (eg: for a xylophone), 
+                //  then stop playing this note once the attack phase is complete
+                if (sustainedNoteSource.soundLibrary.skipSustain) {
+                    if (timer > sustainedNoteSource.soundLibrary.attackDuration) {
+                        StopNote();
+                    }
+                }
             } else {
                 audioSource.volume = Mathfs.RemapClamped(0f, 
                     sustainedNoteSource.soundLibrary.attackDuration, 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: square_25
   m_EditorClassIdentifier: 
   skipSustain: 0
-  attackDuration: 0.1
-  releaseDuration: 0.1
+  attackDuration: 0.064
+  releaseDuration: 0.654
   octaves:
   - {fileID: 0}
   - {fileID: 0}
