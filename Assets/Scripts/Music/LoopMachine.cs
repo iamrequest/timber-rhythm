@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LoopMachine : MonoBehaviour {
+    public LoopMachineEventChannel eventChannel;
     public static LoopMachine Instance { get; private set; }
     private void Awake() {
         if (Instance == null) {
@@ -14,6 +15,17 @@ public class LoopMachine : MonoBehaviour {
     }
     private void Start() {
         if (activeLoopSection == null) activeLoopSection = CreateNewSection();
+    }
+
+    private void OnEnable() {
+        eventChannel.onPlay += Play;
+        eventChannel.onPause += Pause;
+        eventChannel.onStop += Stop;
+    }
+    private void OnDisable() {
+        eventChannel.onPlay -= Play;
+        eventChannel.onPause -= Pause;
+        eventChannel.onStop -= Stop;
     }
 
 
