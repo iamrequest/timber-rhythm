@@ -22,7 +22,7 @@ public class LoopMachineInspector : Editor {
                 loopMachine.Stop();
             }
             if (GUILayout.Button("Queue Recording", EditorStyles.miniButtonMid)) {
-                loopMachine.isRecordingQueued = true;
+                loopMachine.QueueRecording();
             }
             GUILayout.EndHorizontal();
 

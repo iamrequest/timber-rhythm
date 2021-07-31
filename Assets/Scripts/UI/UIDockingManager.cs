@@ -6,12 +6,14 @@ public class UIDockingManager : MonoBehaviour {
     public Camera cam;
     private Animator animator;
     private int isSettingsMenuOpenHash;
-    public float viewAngle;
+    private float viewAngle;
 
     public Transform dockingTransform;
 
     [Range(0f, 1f)]
     public float lerpSpeed = 0.4f;
+
+    // This should probably be done via dot product instead
     [Range(0f, 180f)]
     public float settingsOpenAngle = 30f, settingsCloseAngle = 45f;
 

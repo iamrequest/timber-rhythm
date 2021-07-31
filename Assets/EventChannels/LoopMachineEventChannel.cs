@@ -13,7 +13,7 @@ public class LoopMachineEventChannel : ScriptableObject {
     public UnityAction onPlay;
     public UnityAction onPause;
     public UnityAction onStop;
-    //public UnityAction onRecordingQueued;
+    public UnityAction onRecordingQueued;
     //public UnityAction onRecordingStarted;
     //public UnityAction onRecordingStopped;
 
@@ -27,5 +27,8 @@ public class LoopMachineEventChannel : ScriptableObject {
 
     public void RaiseOnStop() {
         if (onStop != null) onStop.Invoke();
+    }
+    public void RaiseOnRecordingQueued() {
+        if (onRecordingQueued != null) onRecordingQueued.Invoke();
     }
 }

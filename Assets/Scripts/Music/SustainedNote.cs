@@ -10,7 +10,12 @@ using Freya;
 public class SustainedNote: BaseNote {
     // TODO: Replace this with some pooling situation. I don't think I can hook it up to HVR's SFXManager, since I don't have access to its AudioSources
     private AudioSource audioSource;
-    public SustainedNoteSource sustainedNoteSource;
+    public SustainedNoteSource sustainedNoteSource {
+        get {
+            return noteSource as SustainedNoteSource;
+        }
+    }
+
 
     // Used to calculate volume between attack/release
     private float timer;
@@ -23,7 +28,6 @@ public class SustainedNote: BaseNote {
     private void Awake() {
         audioSource = GetComponent<AudioSource>();
         audioSource.loop = true;
-        sustainedNoteSource = noteSource as SustainedNoteSource;
     }
 
     private void Update() {
@@ -92,6 +96,7 @@ public class SustainedNote: BaseNote {
     public void Copy(SustainedNote sustainedNote) {
         base.Copy(sustainedNote);
 
+        noteSource = sustainedNote.sustainedNoteSource;
         sustainedNoteSource.soundLibrary = sustainedNote.sustainedNoteSource.soundLibrary;
     }
 }

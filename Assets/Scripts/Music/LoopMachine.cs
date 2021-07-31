@@ -21,11 +21,13 @@ public class LoopMachine : MonoBehaviour {
         eventChannel.onPlay += Play;
         eventChannel.onPause += Pause;
         eventChannel.onStop += Stop;
+        eventChannel.onRecordingQueued += QueueRecording;
     }
     private void OnDisable() {
         eventChannel.onPlay -= Play;
         eventChannel.onPause -= Pause;
         eventChannel.onStop -= Stop;
+        eventChannel.onRecordingQueued -= QueueRecording;
     }
 
 
@@ -102,6 +104,9 @@ public class LoopMachine : MonoBehaviour {
     public void Stop() {
         isPlaying = false;
         ResetMeasure();
+    }
+    public void QueueRecording() {
+        isRecordingQueued = true;
     }
 
     public void SetActiveLoopSection(LoopSection newLoopSection) {
