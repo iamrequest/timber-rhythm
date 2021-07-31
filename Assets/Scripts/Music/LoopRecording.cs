@@ -11,9 +11,12 @@ public class LoopRecording : MonoBehaviour {
         if (notes == null) notes = new List<ImpactNote>();
     }
 
-    public void AddNote(NoteSource noteSource, float t) {
+    public void RecordNote(ImpactNote originalNote, float t) {
+        // Take a shallow copy of this note
         ImpactNote newNote = gameObject.AddComponent<ImpactNote>();
-        newNote.noteSource = noteSource;
+        newNote.noteSource = originalNote.noteSource;
+        newNote.velocity = originalNote.velocity;
+        newNote.soundClipIndex = originalNote.soundClipIndex;
         newNote.playTime = t;
 
         notes.Add(newNote);

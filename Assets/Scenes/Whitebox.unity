@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 396492602}
   - component: {fileID: 396492601}
   - component: {fileID: 396492600}
+  - component: {fileID: 396492606}
   m_Layer: 0
   m_Name: Note Source
   m_TagString: Untagged
@@ -155,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactNote: {fileID: 0}
+  soundLibrary: {fileID: 11400000, guid: 6b34416d6885c3f44b57b02119e3fa3a, type: 2}
   noiseMakingLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -248,6 +250,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396492606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396492599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9d9c3c83e3006489964a6e1d384b1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClipIndex: 0
+  velocity: 0.5
+  playTime: 0
+  noteSource: {fileID: 0}
 --- !u!1 &564967211
 GameObject:
   m_ObjectHideFlags: 0

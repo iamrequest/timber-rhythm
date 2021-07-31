@@ -7,6 +7,8 @@ public class NoteSource : MonoBehaviour {
     [HideInInspector]
     public ImpactNote impactNote;
 
+    public ImpactNoteSoundLibrary soundLibrary;
+
     // The set of layers that will cause this gameobject to play a note on collision
     public LayerMask noiseMakingLayers;
 
@@ -22,11 +24,19 @@ public class NoteSource : MonoBehaviour {
             return;
         }
 
+        // Pick a random sound from this instrument's sound library
+        impactNote.soundClipIndex = Random.Range(0, soundLibrary.sounds.Count);
+
+        // Calculate the velocity of this note, based on collision velocity
+        impactNote.velocity = Mathf.InverseLerp(soundLibrary.minVelocity, soundLibrary.maxVelocity, collision.relativeVelocity.magnitude);
+        Debug.Log("Velocity: " + collision.relativeVelocity.magnitude.ToString("f2"));
+        
+
         // Play the local note on this instrument
         impactNote.Play();
 
         if (LoopMachine.Instance.isRecording) {
-            LoopMachine.Instance.recordingInProgress.AddNote(this, LoopMachine.Instance.t);
+            LoopMachine.Instance.recordingInProgress.RecordNote(impactNote, LoopMachine.Instance.t);
         }
     }
 }
