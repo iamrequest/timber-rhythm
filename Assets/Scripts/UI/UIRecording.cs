@@ -4,19 +4,17 @@ using UnityEngine;
 using TMPro;
 
 public class UIRecording : MonoBehaviour {
-    private List<UIButton> buttons;
+    private UIRecordingList recordingsList;
     [HideInInspector]
     public TextMeshProUGUI label;
 
     [HideInInspector]
-    public UIRecordingList recordingsList;
-    [HideInInspector]
     public int id;
+    public UIButton deleteButton, muteButton;
 
     private void Awake() {
-        buttons = new List<UIButton>();
-        GetComponentsInChildren(buttons);
         label = GetComponentInChildren<TextMeshProUGUI>();
+        recordingsList = GetComponentInParent<UIRecordingList>();
     }
 
     public void Delete() {
@@ -24,15 +22,16 @@ public class UIRecording : MonoBehaviour {
     }
 
     public void DisableRow() {
-        foreach (UIButton button in buttons) {
-            button.DisableButton();
-        }
+        deleteButton.DisableButton();
+        muteButton.DisableButton();
         label.enabled = false;
     }
     public void EnableRow() {
-        foreach (UIButton button in buttons) {
-            button.EnableButton();
-        }
+        deleteButton.EnableButton();
+        muteButton.EnableButton();
         label.enabled = true;
+    }
+    public void ToggleMuteRecording() {
+        recordingsList.ToggleMuteRecording(id);
     }
 }

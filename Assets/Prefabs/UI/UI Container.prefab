@@ -346,6 +346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loopMachineEventChannel: {fileID: 11400000, guid: 3a5dbfa6aadddcc4c983c0f148d5e8ec,
     type: 2}
+  settingsMenuEventChannel: {fileID: 11400000, guid: 22540b7e5be260a4298e002784ecabad,
+    type: 2}
   uiRecordings:
   - {fileID: 6797296513366184947}
   - {fileID: 3258244456695067016}
@@ -353,13 +355,12 @@ MonoBehaviour:
   - {fileID: 5461361450463054336}
   - {fileID: 4715876115780324585}
   - {fileID: 4395130492828261053}
-  currentPage: 0
-  maxPages: 3
-  recordingCount: 0
-  rangemin: 0
-  rangemax: 0
   recordingCountLabel: {fileID: 6764922194039049522}
   pageCountLabel: {fileID: 6423224497693577172}
+  currentPage: 0
+  maxPages: 3
+  muteSprite: {fileID: 21300000, guid: 7949c3c248b76b24b89b1b1c986c9b35, type: 3}
+  unmuteSprite: {fileID: 21300000, guid: 495308cf30284234dbb9aaef3207c82b, type: 3}
 --- !u!1 &3439792136279866508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1405,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6360967107285922706, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
         type: 3}
+      propertyPath: ConnectedBody
+      value: 
+      objectReference: {fileID: 7735880181049670872}
+    - target: {fileID: 6360967107285922706, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
+        type: 3}
       propertyPath: StartPosition.x
       value: 0.41
       objectReference: {fileID: 0}
@@ -1416,6 +1422,16 @@ PrefabInstance:
         type: 3}
       propertyPath: StartPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360967107285922706, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
+        type: 3}
+      propertyPath: ButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7735880180036262552}
+    - target: {fileID: 6360967107285922706, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
+        type: 3}
+      propertyPath: ButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextPage
       objectReference: {fileID: 0}
     - target: {fileID: 6360967107285922707, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
         type: 3}
@@ -2454,6 +2470,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6395105248390394810, guid: d552a7e122d27f749869f6c8d008e059,
         type: 3}
+      propertyPath: ConnectedBody
+      value: 
+      objectReference: {fileID: 7735880181049670872}
+    - target: {fileID: 6395105248390394810, guid: d552a7e122d27f749869f6c8d008e059,
+        type: 3}
       propertyPath: StartPosition.y
       value: -0.615
       objectReference: {fileID: 0}
@@ -3259,6 +3280,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6360967107285922706, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
         type: 3}
+      propertyPath: ConnectedBody
+      value: 
+      objectReference: {fileID: 7735880181049670872}
+    - target: {fileID: 6360967107285922706, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
+        type: 3}
       propertyPath: StartPosition.x
       value: 0.3
       objectReference: {fileID: 0}
@@ -3271,6 +3297,16 @@ PrefabInstance:
         type: 3}
       propertyPath: StartPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360967107285922706, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
+        type: 3}
+      propertyPath: ButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7735880180036262552}
+    - target: {fileID: 6360967107285922706, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
+        type: 3}
+      propertyPath: ButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PreviousPage
       objectReference: {fileID: 0}
     - target: {fileID: 6360967107285922707, guid: a27a3ebc2c39e9d448cd0d7a388633f6,
         type: 3}

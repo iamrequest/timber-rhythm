@@ -17,6 +17,7 @@ public class UIButton : MonoBehaviour {
 
     private List<TextMeshProUGUI> texts;
     private List<Image> images;
+    public List<Image> icons;
 
     private void Awake() {
         button = GetComponent<HVRPhysicsButton>();
@@ -83,6 +84,15 @@ public class UIButton : MonoBehaviour {
             foreach (Image image in images) {
                 image.enabled = true;
             }
+        }
+    }
+
+    public void SetSprite(Sprite sprite) {
+        if (icons.Count == 0) {
+            Debug.LogWarning("Attempted to set the sprite of this icon, but no icons are set.", this);
+        }
+        foreach (Image i in icons) {
+            i.sprite = sprite;
         }
     }
 }

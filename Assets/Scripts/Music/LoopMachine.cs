@@ -156,7 +156,7 @@ public class LoopMachine : MonoBehaviour {
 
         recordingInProgress = gameObject.AddComponent<LoopRecording>();
         recordingInProgress.parentLoopSection = activeLoopSection;
-        recordingInProgress.name = "" + activeLoopSection.recordings.Count;
+        recordingInProgress.id = "" + activeLoopSection.recordings.Count;
     }
     private void SaveRecording() {
         if (recordingInProgress.notes.Count > 0) {
