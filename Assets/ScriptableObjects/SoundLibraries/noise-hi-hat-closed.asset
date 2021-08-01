@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e238850aa8f19b4bbba36d1bf979a76, type: 3}
-  m_Name: noise-snare
+  m_Name: noise-hi-hat-closed
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: c5e3f15d7021e11468f97d9a8c53a8ea, type: 3}
-  - {fileID: 8300000, guid: e7a809cf797bc634c8c145a4b120aac4, type: 3}
-  - {fileID: 8300000, guid: 0dec9927a86683e45876469e2a4d0673, type: 3}
+  - {fileID: 8300000, guid: e245ac8385f90fb43b90aa7fa7626d24, type: 3}
+  - {fileID: 8300000, guid: 5bf6b5a053bd72b4fba5a8702589b8c2, type: 3}
+  - {fileID: 8300000, guid: c4a568176c4273247b6f3030376bc0b1, type: 3}
   minVelocity: 0.3
   maxVelocity: 1
