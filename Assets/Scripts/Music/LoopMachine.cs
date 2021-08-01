@@ -104,6 +104,12 @@ public class LoopMachine : MonoBehaviour {
     public void Stop() {
         isPlaying = false;
         ResetMeasure();
+
+        if (isRecording) {
+            isRecording = false;
+            recordingInProgress.Delete();
+            recordingInProgress = null;
+        }
     }
     public void QueueRecording() {
         isRecordingQueued = true;
@@ -142,9 +148,11 @@ public class LoopMachine : MonoBehaviour {
         recordingInProgress.parentLoopSection = activeLoopSection;
     }
     private void SaveRecording() {
-        isRecording = false;
+        if (recordingInProgress.notes.Count > 0) {
+            isRecording = false;
 
-        activeLoopSection.recordings.Add(recordingInProgress);
-        recordingInProgress = null;
+            activeLoopSection.recordings.Add(recordingInProgress);
+            recordingInProgress = null;
+        }
     }
 }
