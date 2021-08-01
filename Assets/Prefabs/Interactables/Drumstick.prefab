@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &992894444617683553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6218867606887763533}
+  m_Layer: 0
+  m_Name: socket orientation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6218867606887763533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992894444617683553}
+  m_LocalRotation: {x: -0.000000085794596, y: -0.7071068, z: -0.7071068, w: 0.000000052154068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5791013109738625728}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -180.00002}
 --- !u!1 &4525059481263309880
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +147,7 @@ GameObject:
   - component: {fileID: 5791013109738625728}
   - component: {fileID: 5791013109738625729}
   - component: {fileID: 5791013109738625731}
+  - component: {fileID: 7731126486871009573}
   m_Layer: 0
   m_Name: Drumstick
   m_TagString: Untagged
@@ -137,6 +168,7 @@ Transform:
   m_Children:
   - {fileID: 6329658370644509842}
   - {fileID: 7394800559238677148}
+  - {fileID: 6218867606887763533}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -267,6 +299,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7731126486871009573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5791013109738625742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6eb42dfb1f5401997977dad70251276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SocketOrientation: {fileID: 6218867606887763533}
+  SocketScale: 1
+  CounterScale: {x: 1, y: 1, z: 1}
+  SocketedClip: {fileID: 0}
+  UnsocketedClip: {fileID: 0}
+  LinkedGrabbables: []
+  SocketType: 1
 --- !u!1 &6553172219363292583
 GameObject:
   m_ObjectHideFlags: 0
