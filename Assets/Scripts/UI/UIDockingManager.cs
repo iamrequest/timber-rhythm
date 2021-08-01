@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UIDockingManager : MonoBehaviour {
-    public Camera cam;
     private Animator animator;
     private int isSettingsMenuOpenHash;
     private float viewAngle;
 
+    public SettingsMenuEventChannel settingsMenuEventChannel;
+    public Camera cam;
     public Transform dockingTransform;
 
     [Range(0f, 1f)]
@@ -29,12 +30,16 @@ public class UIDockingManager : MonoBehaviour {
         viewAngle = Vector3.Angle(cam.transform.forward, -transform.forward);
         if (animator.GetBool(isSettingsMenuOpenHash)) {
             if (viewAngle > settingsCloseAngle) {
-                animator.SetBool(isSettingsMenuOpenHash, false);
+                SetMenuOpen(false);
             }
         } else {
             if (viewAngle < settingsOpenAngle) {
-                animator.SetBool(isSettingsMenuOpenHash, true);
+                SetMenuOpen(true);
             }
         }
+    }
+    private void SetMenuOpen(bool isMenuOpen) {
+        animator.SetBool(isSettingsMenuOpenHash, isMenuOpen);
+        settingsMenuEventChannel.RaiseOnMenuOpened(isMenuOpen);
     }
 }
