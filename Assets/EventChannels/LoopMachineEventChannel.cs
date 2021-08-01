@@ -10,12 +10,17 @@ using UnityEngine.Events;
 /// </summary>
 [CreateAssetMenu(menuName = "Event Channels/Loop Machine Event Channel")]
 public class LoopMachineEventChannel : ScriptableObject {
+    // -- These trigger the actual action
     public UnityAction onPlay;
     public UnityAction onPause;
     public UnityAction onStop;
     public UnityAction onRecordingQueued;
-    //public UnityAction onRecordingStarted;
     //public UnityAction onRecordingStopped;
+
+    // -- These trigger in response to the actual action
+    public UnityAction<LoopRecording> recordingSaved;
+    public UnityAction<LoopRecording> recordingDeleted;
+    //public UnityAction onRecordingStarted;
 
     public void RaiseOnPlay() {
         if (onPlay != null) onPlay.Invoke();
@@ -30,5 +35,12 @@ public class LoopMachineEventChannel : ScriptableObject {
     }
     public void RaiseOnRecordingQueued() {
         if (onRecordingQueued != null) onRecordingQueued.Invoke();
+    }
+
+    public void RaiseRecordingSaved(LoopRecording savedRecording) {
+        if (recordingSaved != null) recordingSaved.Invoke(savedRecording);
+    }
+    public void RaiseRecordingDeleted(LoopRecording savedRecording) {
+        if (recordingDeleted != null) recordingDeleted.Invoke(savedRecording);
     }
 }

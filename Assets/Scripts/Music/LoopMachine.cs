@@ -152,6 +152,7 @@ public class LoopMachine : MonoBehaviour {
             isRecording = false;
 
             activeLoopSection.recordings.Add(recordingInProgress);
+            eventChannel.RaiseRecordingSaved(recordingInProgress);
             recordingInProgress = null;
         }
     }

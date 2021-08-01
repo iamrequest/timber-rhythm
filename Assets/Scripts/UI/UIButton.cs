@@ -55,11 +55,15 @@ public class UIButton : MonoBehaviour {
         m_collider.enabled = false;
         button.Rigidbody.isKinematic = true;
 
-        foreach (TextMeshProUGUI text in texts) {
-            text.enabled = false;
+        if (texts != null) {
+            foreach (TextMeshProUGUI text in texts) {
+                text.enabled = false;
+            }
         }
-        foreach (Image image in images) {
-            image.enabled = false;
+        if (images != null) {
+            foreach (Image image in images) {
+                image.enabled = false;
+            }
         }
     }
 
@@ -70,11 +74,15 @@ public class UIButton : MonoBehaviour {
         m_collider.enabled = true;
         button.Rigidbody.isKinematic = false;
 
-        foreach (TextMeshProUGUI text in texts) {
-            text.enabled = true;
+        if (texts != null) {
+            foreach (TextMeshProUGUI text in texts) {
+                text.enabled = true;
+            }
         }
-        foreach (Image image in images) {
-            image.enabled = true;
+        if (images != null) {
+            foreach (Image image in images) {
+                image.enabled = true;
+            }
         }
     }
 }
