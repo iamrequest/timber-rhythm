@@ -9,7 +9,9 @@ using Freya;
 [RequireComponent(typeof(AudioSource))]
 public class SustainedNote: BaseNote {
     // TODO: Replace this with some pooling situation. I don't think I can hook it up to HVR's SFXManager, since I don't have access to its AudioSources
-    private AudioSource audioSource;
+    [HideInInspector]
+    public AudioSource audioSource;
+
     public SustainedNoteSource sustainedNoteSource {
         get {
             return noteSource as SustainedNoteSource;
@@ -98,5 +100,12 @@ public class SustainedNote: BaseNote {
 
         noteSource = sustainedNote.sustainedNoteSource;
         sustainedNoteSource.soundLibrary = sustainedNote.sustainedNoteSource.soundLibrary;
+    }
+
+    public override void Delete() {
+        // TODO: Probably time to start separating recordings into gameobjects. 
+        // I can't delete this audiosource without deleting the note first (because of RequiresComponent).
+        //Destroy(audioSource);
+        Destroy(this);
     }
 }
