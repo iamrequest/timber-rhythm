@@ -15,6 +15,8 @@ public class LoopMachineEventChannel : ScriptableObject {
     public UnityAction onPause;
     public UnityAction onStop;
     public UnityAction onRecordingQueued;
+    public UnityAction onBPMIncrement, onBPMDecrement;
+    public UnityAction onTimeSigNumeratorIncrement, onTimeSigNumeratorDecrement;
     //public UnityAction onRecordingStopped;
 
     // -- These trigger in response to the actual action
@@ -42,5 +44,17 @@ public class LoopMachineEventChannel : ScriptableObject {
     }
     public void RaiseRecordingDeleted(LoopRecording savedRecording) {
         if (recordingDeleted != null) recordingDeleted.Invoke(savedRecording);
+    }
+    public void RaiseOnBPMIncrement() {
+        if (onBPMIncrement != null) onBPMIncrement.Invoke();
+    }
+    public void RaiseOnBPMDecrement() {
+        if (onBPMDecrement != null) onBPMDecrement.Invoke();
+    }
+    public void RaiseOnTimeSigNumeratorIncrement() {
+        if (onTimeSigNumeratorIncrement != null) onTimeSigNumeratorIncrement.Invoke();
+    }
+    public void RaiseOnTimeSigNumeratorDecrement() {
+        if (onTimeSigNumeratorDecrement != null) onTimeSigNumeratorDecrement.Invoke();
     }
 }

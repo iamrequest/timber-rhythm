@@ -21,7 +21,7 @@ public class ImpactNoteSource : NoteSource {
 
         // Calculate the velocity of this note, based on collision velocity
         note.velocity = Mathf.InverseLerp(soundLibrary.minVelocity, soundLibrary.maxVelocity, collision.relativeVelocity.magnitude);
-        Debug.Log("Velocity: " + collision.relativeVelocity.magnitude.ToString("f2"));
+        //Debug.Log("Velocity: " + collision.relativeVelocity.magnitude.ToString("f2"));
         
 
         // Play the local note on this instrument

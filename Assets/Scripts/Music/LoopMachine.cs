@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Freya;
 
 public class LoopMachine : MonoBehaviour {
     public LoopMachineEventChannel eventChannel;
@@ -22,12 +23,20 @@ public class LoopMachine : MonoBehaviour {
         eventChannel.onPause += Pause;
         eventChannel.onStop += Stop;
         eventChannel.onRecordingQueued += QueueRecording;
+        eventChannel.onBPMIncrement += IncrementBPM;
+        eventChannel.onBPMDecrement += DecrementBPM;
+        eventChannel.onTimeSigNumeratorIncrement += IncrementTimeSig;
+        eventChannel.onTimeSigNumeratorDecrement += DecrementTimeSig;
     }
     private void OnDisable() {
         eventChannel.onPlay -= Play;
         eventChannel.onPause -= Pause;
         eventChannel.onStop -= Stop;
         eventChannel.onRecordingQueued -= QueueRecording;
+        eventChannel.onBPMIncrement -= IncrementBPM;
+        eventChannel.onBPMDecrement -= DecrementBPM;
+        eventChannel.onTimeSigNumeratorIncrement += IncrementTimeSig;
+        eventChannel.onTimeSigNumeratorDecrement += DecrementTimeSig;
     }
 
 
@@ -155,5 +164,18 @@ public class LoopMachine : MonoBehaviour {
             eventChannel.RaiseRecordingSaved(recordingInProgress);
             recordingInProgress = null;
         }
+    }
+
+    public void IncrementBPM() {
+        bpm = Mathfs.Clamp(bpm + 1, 1, 300);
+    }
+    public void DecrementBPM() {
+        bpm = Mathfs.Clamp(bpm - 1, 1, 300);
+    }
+    public void IncrementTimeSig() {
+        beatsPerMeasure = Mathfs.Clamp(beatsPerMeasure + 1, 1, 12);
+    }
+    public void DecrementTimeSig() {
+        beatsPerMeasure = Mathfs.Clamp(beatsPerMeasure - 1, 1, 12);
     }
 }
