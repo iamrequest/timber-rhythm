@@ -16,6 +16,7 @@ public class LoopMachineEventChannel : ScriptableObject {
     public UnityAction onStop;
     public UnityAction onRecordingQueued;
     public UnityAction onBPMIncrement, onBPMDecrement;
+    public UnityAction<int> onBPMSet;
     public UnityAction onTimeSigNumeratorIncrement, onTimeSigNumeratorDecrement;
     //public UnityAction onRecordingStopped;
 
@@ -50,6 +51,9 @@ public class LoopMachineEventChannel : ScriptableObject {
     }
     public void RaiseOnBPMDecrement() {
         if (onBPMDecrement != null) onBPMDecrement.Invoke();
+    }
+    public void RaiseOnBPMSet(int newBPM) {
+        if (onBPMSet != null) onBPMSet.Invoke(newBPM);
     }
     public void RaiseOnTimeSigNumeratorIncrement() {
         if (onTimeSigNumeratorIncrement != null) onTimeSigNumeratorIncrement.Invoke();

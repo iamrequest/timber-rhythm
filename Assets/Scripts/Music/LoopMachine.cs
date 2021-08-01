@@ -25,6 +25,7 @@ public class LoopMachine : MonoBehaviour {
         eventChannel.onRecordingQueued += QueueRecording;
         eventChannel.onBPMIncrement += IncrementBPM;
         eventChannel.onBPMDecrement += DecrementBPM;
+        eventChannel.onBPMSet += SetBPM;
         eventChannel.onTimeSigNumeratorIncrement += IncrementTimeSig;
         eventChannel.onTimeSigNumeratorDecrement += DecrementTimeSig;
     }
@@ -35,6 +36,7 @@ public class LoopMachine : MonoBehaviour {
         eventChannel.onRecordingQueued -= QueueRecording;
         eventChannel.onBPMIncrement -= IncrementBPM;
         eventChannel.onBPMDecrement -= DecrementBPM;
+        eventChannel.onBPMSet -= SetBPM;
         eventChannel.onTimeSigNumeratorIncrement += IncrementTimeSig;
         eventChannel.onTimeSigNumeratorDecrement += DecrementTimeSig;
     }
@@ -172,6 +174,10 @@ public class LoopMachine : MonoBehaviour {
     public void DecrementBPM() {
         bpm = Mathfs.Clamp(bpm - 1, 1, 300);
     }
+    public void SetBPM(int bpm){
+        this.bpm = Mathfs.Clamp(bpm - 1, 1, 300);
+    }
+
     public void IncrementTimeSig() {
         beatsPerMeasure = Mathfs.Clamp(beatsPerMeasure + 1, 1, 12);
     }
