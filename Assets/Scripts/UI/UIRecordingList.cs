@@ -83,11 +83,11 @@ public class UIRecordingList : MonoBehaviour {
         UpdateGUI();
     }
     public void NextPage() {
-        currentPage = Mathf.Clamp(currentPage + 1, 0, maxPages);
+        currentPage = Mathf.Clamp(currentPage + 1, 0, maxPages - 1);
         UpdateGUI();
     }
     public void PreviousPage() {
-        currentPage = Mathf.Clamp(currentPage - 1, 0, maxPages - 1);
+        currentPage = Mathf.Clamp(currentPage - 1, 0, maxPages);
         UpdateGUI();
     }
 

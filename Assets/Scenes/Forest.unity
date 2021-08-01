@@ -15516,6 +15516,11 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 8910300625215003159, guid: 88dab68ead9f9824ea637f8746fc1a16,
+        type: 3}
+      propertyPath: far clip plane
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 8910300625417125744, guid: 88dab68ead9f9824ea637f8746fc1a16,
         type: 3}
       propertyPath: m_RootOrder
