@@ -1,26 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIRecording : MonoBehaviour {
+    private List<UIButton> buttons;
     [HideInInspector]
-    public UIRecordingList recordingsList;
-    public LoopRecording recording;
+    public TextMeshProUGUI label;
 
     [HideInInspector]
-    public List<UIButton> buttons;
+    public UIRecordingList recordingsList;
+    [HideInInspector]
+    public int id;
 
     private void Awake() {
         buttons = new List<UIButton>();
         GetComponentsInChildren(buttons);
+        label = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     public void Delete() {
-        recording.Delete();
+        recordingsList.DeleteRecording(id);
+    }
 
-        recordingsList.uiRecordings.Remove(this);
-        recordingsList.UpdateUIPosition();
-
-        Destroy(gameObject);
+    public void DisableRow() {
+        foreach (UIButton button in buttons) {
+            button.DisableButton();
+        }
+        label.enabled = false;
+    }
+    public void EnableRow() {
+        foreach (UIButton button in buttons) {
+            button.EnableButton();
+        }
+        label.enabled = true;
     }
 }

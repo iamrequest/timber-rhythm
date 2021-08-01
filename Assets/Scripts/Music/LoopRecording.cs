@@ -6,6 +6,7 @@ public class LoopRecording : MonoBehaviour {
     public bool isMuted;
     public LoopSection parentLoopSection;
     public List<BaseNote> notes;
+    public string id;
 
     private void Awake() {
         if (notes == null) notes = new List<BaseNote>();

@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Whitebox.unity
-    guid: 1bdb9a511a1743b4e8c3317511dce0b9
+    path: Assets/Scenes/Forest.unity
+    guid: 22b9cafdb2748b9409749cef7cd2175b
   m_configObjects: {}

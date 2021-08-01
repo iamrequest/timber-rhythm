@@ -154,9 +154,9 @@ public class LoopMachine : MonoBehaviour {
         isRecording = true;
         isRecordingQueued = false;
 
-        // TODO: Confirm that recordingInProgress.notes[] gets initialized during build
         recordingInProgress = gameObject.AddComponent<LoopRecording>();
         recordingInProgress.parentLoopSection = activeLoopSection;
+        recordingInProgress.name = "" + activeLoopSection.recordings.Count;
     }
     private void SaveRecording() {
         if (recordingInProgress.notes.Count > 0) {
