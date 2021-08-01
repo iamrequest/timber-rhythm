@@ -7,6 +7,10 @@ public class ImpactNoteEventListener : MonoBehaviour {
     public ImpactNotePlayedEventChannel eventChannel;
     public UnityEvent onEventPlayed;
 
+    [Range(0f, 1f)]
+    [Tooltip("The chance that this event listener will process the event")]
+    public float eventResponseChance;
+
     private void OnEnable() {
         eventChannel.onNotePlayed += RaiseEvent;
     }
@@ -14,8 +18,10 @@ public class ImpactNoteEventListener : MonoBehaviour {
         eventChannel.onNotePlayed -= RaiseEvent;
     }
 
-    public void RaiseEvent(ImpactNote impactNote) {
-        // Delegate the event to a local UnityEvent
-        onEventPlayed.Invoke();
+    public virtual void RaiseEvent(ImpactNote impactNote) {
+        // Delegate the event to a local UnityEvent, if we pass the random chance check
+        if (eventResponseChance > Random.Range(0f, 1f)) {
+            onEventPlayed.Invoke();
+        }
     }
 }
