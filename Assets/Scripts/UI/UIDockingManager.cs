@@ -22,6 +22,9 @@ public class UIDockingManager : MonoBehaviour {
         animator = GetComponentInChildren<Animator>();
         isSettingsMenuOpenHash = Animator.StringToHash("isSettingsMenuOpen");
     }
+    private void Start() {
+        settingsMenuEventChannel.RaiseOnMenuOpened(false);
+    }
 
     private void FixedUpdate() {
         transform.position = Vector3.Lerp(transform.position, dockingTransform.position, lerpSpeed);
