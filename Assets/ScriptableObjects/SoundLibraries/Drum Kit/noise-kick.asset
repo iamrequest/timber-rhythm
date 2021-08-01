@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e238850aa8f19b4bbba36d1bf979a76, type: 3}
   m_Name: noise-kick
   m_EditorClassIdentifier: 
-  sounds:
-  - {fileID: 8300000, guid: 513620d416257c842993a1d68b4c3292, type: 3}
   minVelocity: 0.3
   maxVelocity: 1
+  notePlayedEventChannel: {fileID: 11400000, guid: e7f6ad4a0f7f71842904d7c2c23c4d68,
+    type: 2}
+  sounds:
+  - {fileID: 8300000, guid: 513620d416257c842993a1d68b4c3292, type: 3}

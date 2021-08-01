@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e238850aa8f19b4bbba36d1bf979a76, type: 3}
   m_Name: noise-hi-hat-closed
   m_EditorClassIdentifier: 
+  minVelocity: 0.3
+  maxVelocity: 1
+  notePlayedEventChannel: {fileID: 11400000, guid: cd622a30df503374199b1118465fbd22,
+    type: 2}
   sounds:
   - {fileID: 8300000, guid: e245ac8385f90fb43b90aa7fa7626d24, type: 3}
   - {fileID: 8300000, guid: 5bf6b5a053bd72b4fba5a8702589b8c2, type: 3}
   - {fileID: 8300000, guid: c4a568176c4273247b6f3030376bc0b1, type: 3}
-  minVelocity: 0.3
-  maxVelocity: 1

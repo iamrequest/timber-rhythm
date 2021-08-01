@@ -9,6 +9,11 @@ using UnityEngine;
 /// </summary>
 public class ImpactNote : BaseNote {
     public override void PlayNote() {
+        ImpactNoteSource impactNoteSource = noteSource as ImpactNoteSource;
+        if (impactNoteSource) {
+            impactNoteSource.soundLibrary.notePlayedEventChannel.RaiseOnPlay(this);
+        }
+
         // TODO: Consider switching this to PlaySFXCooldown(). Cooldown should be configurable based on tempo
         SFXPlayer.Instance.PlaySFX(audioClip,
             noteSource.transform.position,

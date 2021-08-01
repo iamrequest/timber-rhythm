@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -823,6 +823,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904833
 AudioSource:
   m_ObjectHideFlags: 0
@@ -984,6 +985,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904838
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1145,6 +1147,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904843
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1306,6 +1309,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904848
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1467,6 +1471,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904853
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1628,6 +1633,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904858
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1789,6 +1795,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904863
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1950,6 +1957,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904868
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2111,6 +2119,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904873
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2272,6 +2281,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904878
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2433,6 +2443,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904883
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2594,6 +2605,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &189904888
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3547,13 +3559,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628163918}
-  m_LocalRotation: {x: 0.021716403, y: -0, z: -0, w: 0.9997642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 456.3, y: 13.3, z: 649.9}
   m_LocalScale: {x: 25.638988, y: 25.638988, z: 25.638988}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 2.489, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &659078770
 GameObject:
   m_ObjectHideFlags: 0
@@ -4107,6 +4119,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4268,6 +4281,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4429,6 +4443,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,6 +4605,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4751,6 +4767,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4912,6 +4929,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5073,6 +5091,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5234,6 +5253,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5395,6 +5415,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5556,6 +5577,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5717,6 +5739,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5878,6 +5901,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1024170175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6201,6 +6225,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6362,6 +6387,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6523,6 +6549,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6684,6 +6711,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6845,6 +6873,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7006,6 +7035,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7167,6 +7197,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7328,6 +7359,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7489,6 +7521,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7650,6 +7683,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7811,6 +7845,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7972,6 +8007,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1033326772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8354,6 +8390,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036651
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8515,6 +8552,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036656
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8676,6 +8714,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036661
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8837,6 +8876,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036666
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8998,6 +9038,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036671
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9159,6 +9200,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036676
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9320,6 +9362,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036681
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9481,6 +9524,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036686
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9642,6 +9686,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036691
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9803,6 +9848,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036696
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9964,6 +10010,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036701
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10125,6 +10172,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1144036706
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11666,6 +11714,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!65 &1590931902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11789,6 +11838,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931910
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11921,6 +11971,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931913
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12053,6 +12104,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931916
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12185,6 +12237,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931919
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12317,6 +12370,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931922
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12449,6 +12503,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931925
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12581,6 +12636,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931928
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12713,6 +12769,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931931
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12970,6 +13027,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931937
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13102,6 +13160,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931940
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13234,6 +13293,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!82 &1590931943
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14357,6 +14417,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14518,6 +14579,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14679,6 +14741,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14840,6 +14903,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15001,6 +15065,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15162,6 +15227,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15323,6 +15389,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15484,6 +15551,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15645,6 +15713,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15806,6 +15875,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15967,6 +16037,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16128,6 +16199,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  audioSource: {fileID: 0}
 --- !u!114 &1829455676
 MonoBehaviour:
   m_ObjectHideFlags: 0

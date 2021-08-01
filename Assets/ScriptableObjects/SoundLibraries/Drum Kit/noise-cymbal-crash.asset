@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e238850aa8f19b4bbba36d1bf979a76, type: 3}
   m_Name: noise-cymbal-crash
   m_EditorClassIdentifier: 
+  minVelocity: 0.3
+  maxVelocity: 1
+  notePlayedEventChannel: {fileID: 11400000, guid: eb9814dc340b9d8419aa9d11cc0d19b9,
+    type: 2}
   sounds:
   - {fileID: 8300000, guid: ece8c374371dc4a4b9b82d3618e4cb69, type: 3}
   - {fileID: 8300000, guid: d85c83f68beca204e8726e41e5663065, type: 3}
   - {fileID: 8300000, guid: b5dc0cf42db682b48b7f9fbdace6fc73, type: 3}
-  minVelocity: 0.3
-  maxVelocity: 1
