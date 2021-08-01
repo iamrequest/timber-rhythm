@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e238850aa8f19b4bbba36d1bf979a76, type: 3}
   m_Name: noise-snare
   m_EditorClassIdentifier: 
+  minVelocity: 0.3
+  maxVelocity: 1
+  notePlayedEventChannel: {fileID: 11400000, guid: c00b33a8656cd3d44a90a6f137807803,
+    type: 2}
   sounds:
   - {fileID: 8300000, guid: c5e3f15d7021e11468f97d9a8c53a8ea, type: 3}
   - {fileID: 8300000, guid: e7a809cf797bc634c8c145a4b120aac4, type: 3}
   - {fileID: 8300000, guid: 0dec9927a86683e45876469e2a4d0673, type: 3}
-  minVelocity: 0.3
-  maxVelocity: 1
