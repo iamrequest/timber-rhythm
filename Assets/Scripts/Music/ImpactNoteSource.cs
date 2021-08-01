@@ -35,7 +35,8 @@ public class ImpactNoteSource : NoteSource {
         note.audioClip = soundLibrary.sounds[Random.Range(0, soundLibrary.sounds.Count)];
 
         // Calculate the velocity of this note, based on collision velocity
-        note.velocity = Mathf.InverseLerp(soundLibrary.minVelocity, soundLibrary.maxVelocity, collision.relativeVelocity.magnitude);
+        // note.velocity = Mathf.InverseLerp(soundLibrary.minVelocity, soundLibrary.maxVelocity, collision.relativeVelocity.magnitude);
+        note.SetNoteVelocity(soundLibrary, collision.relativeVelocity.magnitude);
         //Debug.Log("Velocity: " + collision.relativeVelocity.magnitude.ToString("f2"));
         
 

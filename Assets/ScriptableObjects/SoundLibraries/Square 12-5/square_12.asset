@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26fa4c3f4b2a5664a81692c87793518b, type: 3}
-  m_Name: square_25
+  m_Name: square_12
   m_EditorClassIdentifier: 
   minVelocity: 0
   maxVelocity: 1
@@ -19,7 +19,7 @@ MonoBehaviour:
   releaseDuration: 0.1
   octaves:
   - {fileID: 0}
-  - {fileID: 11400000, guid: 0b47ae4b077a6d1429b390bb7be6022d, type: 2}
-  - {fileID: 11400000, guid: 8ce010dcc8c1e0a4c8b75596192f04ea, type: 2}
-  - {fileID: 11400000, guid: 47aee5e204ae72442a0ece8419cad37a, type: 2}
+  - {fileID: 11400000, guid: 438bd958141e654448393a5d8b038f02, type: 2}
+  - {fileID: 11400000, guid: 23f4a20f28fd03e4f970d00b6f32e00d, type: 2}
+  - {fileID: 11400000, guid: 09b2d61bf896e244dad71182497a70a4, type: 2}
   - {fileID: 0}

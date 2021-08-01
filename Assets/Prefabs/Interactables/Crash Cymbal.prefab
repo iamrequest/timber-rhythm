@@ -88,7 +88,7 @@ MonoBehaviour:
   ParentHandModelImmediately: 0
   ParentHandModel: 1
   BreakDistance: 1
-  RemainsKinematic: 1
+  RemainsKinematic: 0
   Stationary: 0
   ReleasedAngularConversionFactor: 0
   ReleasedVelocityFactor: 1

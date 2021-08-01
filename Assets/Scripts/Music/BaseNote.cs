@@ -23,4 +23,8 @@ public class BaseNote : MonoBehaviour {
         stopTime = source.stopTime;
         velocity = source.velocity;
     }
+
+    public void SetNoteVelocity(BaseSoundLibrary soundLibrary, float collisionMagnitude) {
+        velocity = Mathf.InverseLerp(soundLibrary.minVelocity, soundLibrary.maxVelocity, collisionMagnitude);
+    }
 }

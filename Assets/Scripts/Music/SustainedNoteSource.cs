@@ -41,6 +41,8 @@ public class SustainedNoteSource : NoteSource {
             noteStartT = 0f;
         }
 
+        //note.velocity = Mathf.InverseLerp(soundLibrary.minVelocity, soundLibrary.maxVelocity, collision.relativeVelocity.magnitude);
+        note.SetNoteVelocity(soundLibrary, collision.relativeVelocity.magnitude);
         note.PlayNote();
     }
 
