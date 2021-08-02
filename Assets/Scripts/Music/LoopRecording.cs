@@ -20,6 +20,7 @@ public class LoopRecording : MonoBehaviour {
             ImpactNote newNote = gameObject.AddComponent<ImpactNote>();
             newNote.Copy(originalImpactNote);
 
+            newNote.sourcePositionOverride = LoopMachine.Instance.metronomeSFXTransform;
             newNote.playTime = startT;
             newNote.stopTime = endT;
 
