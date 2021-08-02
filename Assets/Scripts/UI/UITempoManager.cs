@@ -28,6 +28,10 @@ public class UITempoManager : MonoBehaviour {
         loopMachineEventChannel.RaiseOnTimeSigNumeratorDecrement();
         UpdateGUI();
     }
+    public void ToggleMetronome() {
+        // This really should be a separate event, it kinda ruins the purpose of event channels
+        loopMachineEventChannel.RaiseOnMetronomeSet(!LoopMachine.Instance.isMetronomeActive);
+    }
 
 
     public void UpdateGUI() {

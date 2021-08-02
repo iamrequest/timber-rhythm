@@ -117,11 +117,20 @@ public class LoopMachine : MonoBehaviour {
     }
 
     private void PlayMetronomeSFX(float previousT, float t) {
-        float firstBeatT = measureDuration / bpm;
 
-        // If any beat occurred in this frame
-        if (firstBeatT > previousT && firstBeatT <= t) {
-            SFXPlayer.Instance.PlaySFX(metronomeOnBeatClip, metronomeSFXTransform.position, 1f, metronomeVolume);
+        // I can't brain right now, so I'm doing this in a for loop instead of properly figuring out the math
+        for (int i = 0; i < beatsPerMeasure; i++) {
+            //float firstBeatT = (measureDuration / bpm) * (float)i;
+            float beatT = (1f / beatsPerMeasure) * i;
+
+            // If any beat occurred in this frame
+            if (beatT >= previousT && beatT <= t) {
+                if (i == 0) {
+                    SFXPlayer.Instance.PlaySFX(metronomeOnBeatClip, metronomeSFXTransform.position, 1f, metronomeVolume);
+                } else {
+                    SFXPlayer.Instance.PlaySFX(metronomeOffBeatClip, metronomeSFXTransform.position, 1f, metronomeVolume);
+                }
+            }
         }
     }
 
