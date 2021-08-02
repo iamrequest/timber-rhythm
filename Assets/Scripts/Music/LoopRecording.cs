@@ -81,4 +81,11 @@ public class LoopRecording : MonoBehaviour {
 
         Destroy(this);
     }
+
+    public void SetMuted(bool isMuted) {
+        this.isMuted = isMuted;
+        foreach (BaseNote note in notes) {
+            note.StopNote();
+        }
+    }
 }

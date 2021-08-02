@@ -106,7 +106,7 @@ public class UIRecordingList : MonoBehaviour {
     public void ToggleMuteRecording(int id) {
         int recordingIndex = uiRecordings.Count * currentPage + id;
         if (recordingIndex < LoopMachine.Instance.activeLoopSection.recordings.Count) {
-            LoopMachine.Instance.activeLoopSection.recordings[recordingIndex].isMuted = !LoopMachine.Instance.activeLoopSection.recordings[recordingIndex].isMuted;
+            LoopMachine.Instance.activeLoopSection.recordings[recordingIndex].SetMuted(!LoopMachine.Instance.activeLoopSection.recordings[recordingIndex].isMuted);
 
             UpdateGUI();
         } else {
