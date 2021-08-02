@@ -2453,6 +2453,11 @@ PrefabInstance:
       propertyPath: StartPosition.y
       value: -0.615
       objectReference: {fileID: 0}
+    - target: {fileID: 3796085191575743712, guid: d552a7e122d27f749869f6c8d008e059,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3796085191575743717, guid: d552a7e122d27f749869f6c8d008e059,
         type: 3}
       propertyPath: ConnectedBody

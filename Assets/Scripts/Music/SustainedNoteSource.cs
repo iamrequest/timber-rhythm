@@ -17,6 +17,8 @@ public class SustainedNoteSource : NoteSource {
     [Range(0f, 1f)]
     private float noteStartT;
 
+    private int touchCount;
+
     private void Awake() {
         note = GetComponent<SustainedNote>();
         note.noteSource = this;
@@ -24,6 +26,7 @@ public class SustainedNoteSource : NoteSource {
     }
 
     private void OnCollisionEnter(Collision collision) {
+        touchCount++;
         // Don't play the same note more than once at the same time
         if (note.isPlaying) return;
 
@@ -47,6 +50,8 @@ public class SustainedNoteSource : NoteSource {
     }
 
     private void OnCollisionExit(Collision collision) {
+        touchCount--;
+        if (touchCount > 0) return;
         note.StopNote();
 
         if (LoopMachine.Instance.isRecording) {
