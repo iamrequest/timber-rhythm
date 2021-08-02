@@ -52,4 +52,10 @@ MonoBehaviour:
   beatsPerMeasure: 4
   measuresPerLoop: 1
   t: 0
+  isMetronomeActive: 0
+  metronomeSFXTransform: {fileID: 0}
+  metronomeOnBeatClip: {fileID: 8300000, guid: b6bd0d890af235446a3618500d0dcf63, type: 3}
+  metronomeOffBeatClip: {fileID: 8300000, guid: 2086d3813cf9d8843865c0907c4d22ed,
+    type: 3}
+  metronomeVolume: 0.432
   loopSections: []

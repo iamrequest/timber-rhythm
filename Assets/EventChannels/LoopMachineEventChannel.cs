@@ -15,6 +15,7 @@ public class LoopMachineEventChannel : ScriptableObject {
     public UnityAction onPause;
     public UnityAction onStop;
     public UnityAction onRecordingQueued;
+    public UnityAction<bool> onMetronomeSet;
     public UnityAction onBPMIncrement, onBPMDecrement;
     public UnityAction<int> onBPMSet;
     public UnityAction onTimeSigNumeratorIncrement, onTimeSigNumeratorDecrement;
@@ -45,6 +46,9 @@ public class LoopMachineEventChannel : ScriptableObject {
     }
     public void RaiseRecordingDeleted(LoopRecording savedRecording) {
         if (recordingDeleted != null) recordingDeleted.Invoke(savedRecording);
+    }
+    public void RaiseOnMetronomeSet(bool isMetronomeActive) {
+        if (onMetronomeSet != null) onMetronomeSet.Invoke(isMetronomeActive);
     }
     public void RaiseOnBPMIncrement() {
         if (onBPMIncrement != null) onBPMIncrement.Invoke();

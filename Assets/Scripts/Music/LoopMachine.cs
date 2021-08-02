@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Freya;
+using System;
+using HurricaneVR.Framework.Core.Utils;
 
 public class LoopMachine : MonoBehaviour {
     public LoopMachineEventChannel eventChannel;
@@ -23,6 +25,7 @@ public class LoopMachine : MonoBehaviour {
         eventChannel.onPause += Pause;
         eventChannel.onStop += Stop;
         eventChannel.onRecordingQueued += QueueRecording;
+        eventChannel.onMetronomeSet += SetMetronome;
         eventChannel.onBPMIncrement += IncrementBPM;
         eventChannel.onBPMDecrement += DecrementBPM;
         eventChannel.onBPMSet += SetBPM;
@@ -34,6 +37,7 @@ public class LoopMachine : MonoBehaviour {
         eventChannel.onPause -= Pause;
         eventChannel.onStop -= Stop;
         eventChannel.onRecordingQueued -= QueueRecording;
+        eventChannel.onMetronomeSet -= SetMetronome;
         eventChannel.onBPMIncrement -= IncrementBPM;
         eventChannel.onBPMDecrement -= DecrementBPM;
         eventChannel.onBPMSet -= SetBPM;
@@ -62,6 +66,13 @@ public class LoopMachine : MonoBehaviour {
 
     private float elapsedTime, measureDuration, loopDuration;
 
+    [Header("Metronome")]
+    public bool isMetronomeActive;
+    public Transform metronomeSFXTransform;
+    public AudioClip metronomeOnBeatClip, metronomeOffBeatClip;
+
+    [Range(0f, 1f)]
+    public float metronomeVolume;
 
     [Header("Loop Section")]
     public List<LoopSection> loopSections;
@@ -71,6 +82,10 @@ public class LoopMachine : MonoBehaviour {
         if (isPlaying) {
             // Figure out how much time passed between this frame and the last
             CalculateElapsedTime();
+
+            if (isMetronomeActive) {
+                PlayMetronomeSFX(previousT, t);
+            }
 
             // Play all notes for the active section, that exist between the supplied time values
             if (activeLoopSection) {
@@ -100,6 +115,16 @@ public class LoopMachine : MonoBehaviour {
         }
         t = elapsedTime / loopDuration;
     }
+
+    private void PlayMetronomeSFX(float previousT, float t) {
+        float firstBeatT = measureDuration / bpm;
+
+        // If any beat occurred in this frame
+        if (firstBeatT > previousT && firstBeatT <= t) {
+            SFXPlayer.Instance.PlaySFX(metronomeOnBeatClip, metronomeSFXTransform.position, 1f, metronomeVolume);
+        }
+    }
+
 
     public void ResetMeasure() {
         elapsedTime = 0f;
@@ -174,7 +199,7 @@ public class LoopMachine : MonoBehaviour {
     public void DecrementBPM() {
         bpm = Mathfs.Clamp(bpm - 1, 1, 300);
     }
-    public void SetBPM(int bpm){
+    public void SetBPM(int bpm) {
         this.bpm = Mathfs.Clamp(bpm - 1, 1, 300);
     }
 
@@ -183,5 +208,9 @@ public class LoopMachine : MonoBehaviour {
     }
     public void DecrementTimeSig() {
         beatsPerMeasure = Mathfs.Clamp(beatsPerMeasure - 1, 1, 12);
+    }
+
+    public void SetMetronome(bool isMetronomeActive) {
+        this.isMetronomeActive = isMetronomeActive;
     }
 }
