@@ -65,6 +65,10 @@ public class SustainedNote: BaseNote {
         timer = 0f;
         isPlaying = true;
 
+        // Alert the event channel
+        // TODO: Switch this to a sustained note library at some point. For now it just triggers one-shot VFX
+        sustainedNoteSource.soundLibrary.notePlayedEventChannel.RaiseOnPlay(null);
+
         if (stopPlayingAudioCoroutine != null) {
             StopCoroutine(stopPlayingAudioCoroutine);
         }

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minVelocity: 0
   maxVelocity: 1
+  notePlayedEventChannel: {fileID: 11400000, guid: 4fd6310a549b96146a638ba8655f0bf2,
+    type: 2}
   skipSustain: 0
   attackDuration: 0.1
   releaseDuration: 0.1

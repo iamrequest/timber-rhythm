@@ -4,6 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "Music/Sustained Note Sound Library")]
 public class SustainedNoteSoundLibrary : BaseSoundLibrary {
+    public ImpactNotePlayedEventChannel notePlayedEventChannel;
     [Tooltip("If true, this instrument will call StopNote() just after the note has finished its attack. Eg: A xylophone")]
     public bool skipSustain;
 
