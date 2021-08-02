@@ -46,6 +46,7 @@ public class LoopMachine : MonoBehaviour {
     }
 
 
+    public Transform audioOutputTransform;
     public bool isPlaying;
     public bool isRecording, isRecordingQueued;
     public LoopRecording recordingInProgress;
@@ -68,7 +69,6 @@ public class LoopMachine : MonoBehaviour {
 
     [Header("Metronome")]
     public bool isMetronomeActive;
-    public Transform metronomeSFXTransform;
     public AudioClip metronomeOnBeatClip, metronomeOffBeatClip;
 
     [Range(0f, 1f)]
@@ -126,9 +126,9 @@ public class LoopMachine : MonoBehaviour {
             // If any beat occurred in this frame
             if (beatT >= previousT && beatT <= t) {
                 if (i == 0) {
-                    SFXPlayer.Instance.PlaySFX(metronomeOnBeatClip, metronomeSFXTransform.position, 1f, metronomeVolume);
+                    SFXPlayer.Instance.PlaySFX(metronomeOnBeatClip, audioOutputTransform.position, 1f, metronomeVolume);
                 } else {
-                    SFXPlayer.Instance.PlaySFX(metronomeOffBeatClip, metronomeSFXTransform.position, 1f, metronomeVolume);
+                    SFXPlayer.Instance.PlaySFX(metronomeOffBeatClip, audioOutputTransform.position, 1f, metronomeVolume);
                 }
             }
         }

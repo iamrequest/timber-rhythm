@@ -6,11 +6,8 @@ using Freya;
 /// <summary>
 /// A sustained note. Right now, there is only support for attack/sustain/release (ie: no decay).
 /// </summary>
-[RequireComponent(typeof(AudioSource))]
 public class SustainedNote: BaseNote {
-    // TODO: Replace this with some pooling situation. I don't think I can hook it up to HVR's SFXManager, since I don't have access to its AudioSources
-    [HideInInspector]
-    public AudioSource audioSource;
+    private AudioSource audioSource;
 
     public SustainedNoteSource sustainedNoteSource {
         get {
@@ -24,16 +21,12 @@ public class SustainedNote: BaseNote {
     private float preReleaseVolume;
     private Coroutine stopPlayingAudioCoroutine;
 
+    // This will be false if we're either not playing the note, or we're in the "note release" phase.
     public bool isPlaying { get; private set; }
 
 
-    private void Awake() {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.loop = true;
-    }
-
     private void Update() {
-        if (audioSource.isPlaying) {
+        if (audioSource && audioSource.isPlaying) {
             timer += Time.deltaTime;
 
             if (isPlaying) {
@@ -73,14 +66,17 @@ public class SustainedNote: BaseNote {
             StopCoroutine(stopPlayingAudioCoroutine);
         }
 
-        if (audioClip == null) {
-            // Caching just in case, this should never be null unless I'm doing something in the inspector
-            audioClip = sustainedNoteSource.GetAudioClip();
-        } else {
+        audioSource = AudioSourceObjectPool.Instance.GetAudioSourceFromPool();
+        if (audioSource) {
+            audioSource.loop = true;
+            audioSource.volume = 0f; // Setting this to prevent weird clicking noise at the beginning of the audio
             audioSource.clip = audioClip;
+            audioSource.transform.position = LoopMachine.Instance.audioOutputTransform.position; // Maybe consider moving this on every frame, for long notes
+            audioSource.Play();
+        } else {
+            // No available audio sources, don't bother playing the note
+            isPlaying = false;
         }
-        audioSource.volume = 0f; // Setting this to prevent weird clicking noise at the beginning of the audio
-        audioSource.Play();
     }
 
     public override void StopNote() {
@@ -96,7 +92,11 @@ public class SustainedNote: BaseNote {
 
     private IEnumerator DoStopAudioSource(float delay) {
         yield return new WaitForSeconds(delay);
-        audioSource.Stop();
+        if (audioSource) {
+            audioSource.Stop();
+            AudioSourceObjectPool.Instance.ReturnToPool(audioSource.gameObject);
+            audioSource = null;
+        }
     }
 
     public void Copy(SustainedNote sustainedNote) {
@@ -107,9 +107,11 @@ public class SustainedNote: BaseNote {
     }
 
     public override void Delete() {
-        // TODO: Probably time to start separating recordings into gameobjects. 
-        // I can't delete this audiosource without deleting the note first (because of RequiresComponent).
-        //Destroy(audioSource);
+        StopNote();
+        if (audioSource) {
+            audioSource.Stop();
+            AudioSourceObjectPool.Instance.ReturnToPool(audioSource.gameObject);
+        }
         Destroy(this);
     }
 }

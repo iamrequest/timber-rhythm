@@ -20,7 +20,7 @@ public class LoopRecording : MonoBehaviour {
             ImpactNote newNote = gameObject.AddComponent<ImpactNote>();
             newNote.Copy(originalImpactNote);
 
-            newNote.sourcePositionOverride = LoopMachine.Instance.metronomeSFXTransform;
+            newNote.sourcePositionOverride = LoopMachine.Instance.audioOutputTransform;
             newNote.playTime = startT;
             newNote.stopTime = endT;
 
@@ -65,17 +65,7 @@ public class LoopRecording : MonoBehaviour {
 
             BaseNote note = notes[notes.Count - 1];
             notes.Remove(note);
-
-            // TODO: Need to refactor recordings into their own gameobjects, so I can just trash the whole gameobject. 
-            //  Either that, or I need to properly object pool my sustained note audio sources
-            SustainedNote sustainedNote = note as SustainedNote;
-            if (sustainedNote) {
-                AudioSource audioSource = sustainedNote.audioSource;
-                note.Delete();
-                Destroy(audioSource);
-            } else {
-                note.Delete();
-            }
+            note.Delete();
 
             //Destroy(note);
         }
