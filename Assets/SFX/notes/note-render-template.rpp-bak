@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "6.27/win64" 1627834464
+<REAPER_PROJECT 0.1 "6.27/win64" 1627954315
   RIPPLE 0
   GROUPOVERRIDE 0 0 0
   AUTOXFADE 1
@@ -14,7 +14,7 @@
   TIMEMODE 1 5 -1 30 0 0 -1
   VIDEO_CONFIG 0 0 256
   PANMODE 3
-  CURSOR 0.46280351120804
+  CURSOR 0.5
   ZOOM 59.2043909271104 0 0
   VZOOMEX 6 0
   USE_REC_CFG 0
@@ -27,7 +27,7 @@
   >
   <APPLYFX_CFG
   >
-  RENDER_FILE "D:\My Files\documents\unity\vrjam2021\Assets\SFX\notes\processing\pulse_12.ogg"
+  RENDER_FILE "D:\My Files\documents\unity\vrjam2021\Assets\SFX\notes\processing\pulse_50.ogg"
   RENDER_FMT 0 2 44100
   RENDER_1X 0
   RENDER_RANGE 2 0 10 18 1000
@@ -118,12 +118,12 @@
         6RwAfe5e7f4AAAAAAgAAAAEAAAAAAAAAAgAAAAAAAAAbBQAAAQAAAP//EAA=
         CwUAAAEAAABWQzIhxgQAADxyb290PjxQYXJhbXM+PFBBUkFNIGlkPSJhcnBlZ2dpb0RpcmVjdGlvbiIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iYXJwZWdnaW9UaW1l
         IiB2YWx1ZT0iMC4wMjk5OTk5OTkzMjk0NDc3NSIvPjxQQVJBTSBpZD0iYXR0YWNrIiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJiZW5kUmFuZ2UiIHZhbHVlPSIyLjAi
-        Lz48UEFSQU0gaWQ9ImNvbG9yU2NoZW1lIiB2YWx1ZT0iMS4wIi8+PFBBUkFNIGlkPSJkZWNheSIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iZHV0eSIgdmFsdWU9IjAu
+        Lz48UEFSQU0gaWQ9ImNvbG9yU2NoZW1lIiB2YWx1ZT0iMS4wIi8+PFBBUkFNIGlkPSJkZWNheSIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iZHV0eSIgdmFsdWU9IjIu
         MCIvPjxQQVJBTSBpZD0iZ2FpbiIgdmFsdWU9IjAuNSIvPjxQQVJBTSBpZD0iaXNBZHZhbmNlZFBhbmVsT3Blbl9yYXciIHZhbHVlPSIxLjAiLz48UEFSQU0gaWQ9Imlz
         QXJwZWdnaW9FbmFibGVkX3JhdyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0iaXNEdXR5U2VxdWVuY2VFbmFibGVkX3JhdyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0i
         aXNQaXRjaFNlcXVlbmNlRW5hYmxlZF9yYXciIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9ImlzVm9sdW1lU2VxdWVuY2VFbmFibGVkX3JhdyIgdmFsdWU9IjAuMCIvPjxQ
         QVJBTSBpZD0ibWF4UG9seSIgdmFsdWU9IjguMCIvPjxQQVJBTSBpZD0ibm9pc2VBbGdvcml0aG1fcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJvc2MiIHZhbHVl
-        PSIwLjAiLz48UEFSQU0gaWQ9InBpdGNoU2VxdWVuY2VNb2RlX3JhdyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0icmVsZWFzZSIgdmFsdWU9IjAuMCIvPjxQQVJBTSBp
+        PSIxLjAiLz48UEFSQU0gaWQ9InBpdGNoU2VxdWVuY2VNb2RlX3JhdyIgdmFsdWU9IjAuMCIvPjxQQVJBTSBpZD0icmVsZWFzZSIgdmFsdWU9IjAuMCIvPjxQQVJBTSBp
         ZD0icmVzdHJpY3RzVG9ORVNGcmVxdWVuY3lfcmF3IiB2YWx1ZT0iMC4wIi8+PFBBUkFNIGlkPSJzdXNsZXZlbCIgdmFsdWU9IjEuMCIvPjxQQVJBTSBpZD0ic3dlZXBJ
         bml0aWFsUGl0Y2giIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9InN3ZWVwVGltZSIgdmFsdWU9IjAuMTAwMDAwMDAxNDkwMTE2MSIvPjxQQVJBTSBpZD0idmlicmF0b0Rl
         bGF5IiB2YWx1ZT0iMC4yOTk5OTk5ODIxMTg2MDY2Ii8+PFBBUkFNIGlkPSJ2aWJyYXRvRGVwdGgiIHZhbHVlPSIwLjAiLz48UEFSQU0gaWQ9InZpYnJhdG9JZ25vcmVz
@@ -185,8 +185,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {A318EC9E-2B0E-4667-96C3-9CDA4992AA45}
-        e 0 90 3c 60
-        e 61440 80 3c 00
+        e 0 90 24 60
+        e 61440 80 24 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -215,7 +215,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -235,7 +235,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {424E3BDC-E7EF-4041-AC37-ACAE6E42715C}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -249,8 +249,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {8AC64DDF-4473-4AFC-99B0-E92D9D336767}
-        e 0 90 3d 60
-        e 61440 80 3d 00
+        e 0 90 25 60
+        e 61440 80 25 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -279,7 +279,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -299,7 +299,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {BAD15E7D-EA2E-410D-B08D-212748271B50}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -313,8 +313,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {4F6F5505-598F-41A2-A559-99780A487DFE}
-        e 0 90 3e 60
-        e 61440 80 3e 00
+        e 0 90 26 60
+        e 61440 80 26 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -343,7 +343,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -363,7 +363,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {31C8144A-990F-4B5F-95DE-51E2F9D7B120}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -377,8 +377,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {2C69D8C3-D1A9-48D1-A1B6-0DA04336803F}
-        e 0 90 3f 60
-        e 61440 80 3f 00
+        e 0 90 27 60
+        e 61440 80 27 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -407,7 +407,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -427,7 +427,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {E1FC6866-F55F-4942-A9A4-F37A4B112D09}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -441,8 +441,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {009F13FF-C7A0-48F4-87D3-E489F60D33BC}
-        e 0 90 40 60
-        e 61440 80 40 00
+        e 0 90 28 60
+        e 61440 80 28 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -471,7 +471,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -491,7 +491,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {16F39E9F-1D22-41BD-8CDF-E684E860AC6E}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -505,8 +505,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {49C46F10-25EE-4389-B7C0-A234C35EE43F}
-        e 0 90 41 60
-        e 61440 80 41 00
+        e 0 90 29 60
+        e 61440 80 29 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -535,7 +535,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -555,7 +555,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {172A54E4-7D41-42E0-A6A6-559759C74DC1}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -569,8 +569,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {DE04ACAE-B2F9-4B5F-A4B0-86FF89C801EE}
-        e 0 90 42 60
-        e 61440 80 42 00
+        e 0 90 2a 60
+        e 61440 80 2a 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -599,7 +599,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -619,7 +619,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {1327BEA5-1EAC-4E66-923B-D883B0FCCDA1}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -633,8 +633,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {5411BAE6-3D2D-4A36-8679-019A79074C6F}
-        e 0 90 43 60
-        e 61440 80 43 00
+        e 0 90 2b 60
+        e 61440 80 2b 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -663,7 +663,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -683,7 +683,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {F4BF0BD6-AA36-4F22-B41E-068E5EA9AA64}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -697,8 +697,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {6B6174FC-9943-4B28-98D2-02F1A04229C9}
-        e 0 90 44 60
-        e 61440 80 44 00
+        e 0 90 2c 60
+        e 61440 80 2c 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -727,7 +727,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -747,7 +747,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {8714AC7E-5433-42B3-86FC-351AE0CAEF3D}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -761,8 +761,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {57930590-1905-4EF8-B01B-E2EB8B664A0D}
-        e 0 90 45 60
-        e 61440 80 45 00
+        e 0 90 2d 60
+        e 61440 80 2d 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -791,7 +791,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -811,7 +811,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {32DE8F74-7F61-4479-9774-453BE642272C}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -825,8 +825,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {4FB8D2B2-ED6A-4703-A610-F99982F1A7BA}
-        e 0 90 46 60
-        e 61440 80 46 00
+        e 0 90 2e 60
+        e 61440 80 2e 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -855,7 +855,7 @@
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
     FREEMODE 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0
     VU 2
     TRACKHEIGHT 25 0 0 0 0 0
@@ -875,7 +875,7 @@
       FADEIN 1 0 0 1 0 0 0
       FADEOUT 1 0 0 1 0 0 0
       MUTE 0 0
-      SEL 0
+      SEL 1
       IGUID {D7DC963D-DC17-43B6-B7FC-54148209E33E}
       IID 1
       NAME "02-Lead Voice-Recorded MIDI"
@@ -889,8 +889,8 @@
         HASDATA 1 960 QN
         CCINTERP 32
         POOLEDEVTS {6C9E6EED-1572-463C-98F8-77A99713AC93}
-        e 0 90 47 60
-        e 61440 80 47 00
+        e 0 90 2f 60
+        e 61440 80 2f 00
         E 0 b0 7b 00
         CCINTERP 32
         CHASE_CC_TAKEOFFS 1
@@ -1234,7 +1234,7 @@
       IID 2
       NAME "03-Harmony-Recorded MIDI"
       VOLPAN 1 0 1 -1
-      SOFFS 7.98565863836451 15.97131727672903
+      SOFFS 7.98565863836451 15.97131727672902
       PLAYRATE 1 1 0 -1 0 0.0025
       CHANMODE 0
       GUID {F1DCBE7B-B6C1-4BB1-848C-261888FBF357}
