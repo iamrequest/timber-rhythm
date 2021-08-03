@@ -8,13 +8,23 @@ using UnityEngine;
 public class FollowTransform : MonoBehaviour {
     public Transform target;
     private Rigidbody rb;
+    public bool moveTargetHereOnAwake;
 
     private void Awake() {
         rb = GetComponent<Rigidbody>();
+        if (moveTargetHereOnAwake) {
+            target.transform.position = transform.position;
+            target.transform.rotation = transform.rotation;
+        }
     }
 
     private void FixedUpdate() {
-        rb.position = target.position;
-        rb.rotation = target.rotation;
+        if (rb == null) {
+            transform.position = target.position;
+            transform.rotation = target.rotation;
+        } else {
+            rb.position = target.position;
+            rb.rotation = target.rotation;
+        }
     }
 }

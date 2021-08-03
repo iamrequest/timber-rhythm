@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fa4c3f4b2a5664a81692c87793518b, type: 3}
+  m_Name: square_50
+  m_EditorClassIdentifier: 
+  minVelocity: 0
+  maxVelocity: 1
+  notePlayedEventChannel: {fileID: 11400000, guid: 4fd6310a549b96146a638ba8655f0bf2,
+    type: 2}
+  skipSustain: 0
+  attackDuration: 0.1
+  releaseDuration: 0.1
+  octaves:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: bf54ad4d6d8657145bcb473265e05a54, type: 2}
+  - {fileID: 11400000, guid: 613bb76d27f756a4eb64a566903a658d, type: 2}
+  - {fileID: 11400000, guid: 0db7d452ee507d448b8468a0e3e2d28c, type: 2}
+  - {fileID: 0}

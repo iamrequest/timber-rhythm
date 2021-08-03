@@ -25,6 +25,10 @@ public class SustainedNoteSource : NoteSource {
         note.audioClip = soundLibrary.octaves[octave - 1].GetNote(noteName);
     }
 
+    private void OnEnable() {
+        touchCount = 0;
+    }
+
     private void OnCollisionEnter(Collision collision) {
         touchCount++;
         // Don't play the same note more than once at the same time

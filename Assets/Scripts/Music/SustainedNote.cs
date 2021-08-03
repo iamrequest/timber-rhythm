@@ -90,6 +90,22 @@ public class SustainedNote: BaseNote {
         stopPlayingAudioCoroutine = StartCoroutine(DoStopAudioSource(sustainedNoteSource.soundLibrary.releaseDuration));
     }
 
+    public void StopNoteImmediately() {
+        isPlaying = false;
+
+        // Cancel the fade-out 
+        if (stopPlayingAudioCoroutine != null) {
+            StopCoroutine(stopPlayingAudioCoroutine);
+        }
+
+        // Return the audio source to the object pool
+        if (audioSource) {
+            audioSource.Stop();
+            AudioSourceObjectPool.Instance.ReturnToPool(audioSource.gameObject);
+            audioSource = null;
+        }
+    }
+
     private IEnumerator DoStopAudioSource(float delay) {
         yield return new WaitForSeconds(delay);
         if (audioSource) {
