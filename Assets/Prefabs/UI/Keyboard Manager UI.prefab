@@ -666,7 +666,7 @@ PrefabInstance:
     - target: {fileID: 2415968433016847669, guid: 2aa1ba83f3afd5345bb987908f7eac46,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0.3391517
+      value: 0.32944772
       objectReference: {fileID: 0}
     - target: {fileID: 2415968433016847669, guid: 2aa1ba83f3afd5345bb987908f7eac46,
         type: 3}
@@ -691,7 +691,7 @@ PrefabInstance:
     - target: {fileID: 3571650390347051273, guid: 2aa1ba83f3afd5345bb987908f7eac46,
         type: 3}
       propertyPath: m_text
-      value: Square 25%
+      value: Pitch Shifted Noise
       objectReference: {fileID: 0}
     - target: {fileID: 3571650390347051273, guid: 2aa1ba83f3afd5345bb987908f7eac46,
         type: 3}
@@ -731,7 +731,7 @@ PrefabInstance:
     - target: {fileID: 3571650390347051273, guid: 2aa1ba83f3afd5345bb987908f7eac46,
         type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3745781412122613287, guid: 2aa1ba83f3afd5345bb987908f7eac46,
         type: 3}
