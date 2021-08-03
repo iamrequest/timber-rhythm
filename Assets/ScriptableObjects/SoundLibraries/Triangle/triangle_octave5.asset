@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fadc56462fe8e664eb7ff8d61a3cb44f, type: 3}
+  m_Name: triangle_octave5
+  m_EditorClassIdentifier: 
+  notes:
+  - {fileID: 8300000, guid: 11d5d1482bd0928409a9bbe8f945dac7, type: 3}
+  - {fileID: 8300000, guid: b2ea5bb80a4f9d344a85aa03eead9e6b, type: 3}
+  - {fileID: 8300000, guid: 0d4f17ce232d63e4780784fb54231b06, type: 3}
+  - {fileID: 8300000, guid: 59927e0cec6044744bb9cfca0566c7f6, type: 3}
+  - {fileID: 8300000, guid: bfe5916760161bd4c9fb0004e07dd6c3, type: 3}
+  - {fileID: 8300000, guid: 13e7def55fe4ded429d9c0f4d0c3a0ec, type: 3}
+  - {fileID: 8300000, guid: d3ee3b3a616bb7d4097e1fe2acb1e7e9, type: 3}
+  - {fileID: 8300000, guid: fe59488f1a6b40b4c80b3af092d4af9f, type: 3}
+  - {fileID: 8300000, guid: 53cc2d02322a8ea449f0358952cca58f, type: 3}
+  - {fileID: 8300000, guid: 74504052bc8c58341a3c5a956836e4a6, type: 3}
+  - {fileID: 8300000, guid: 7a837fb3f4bd89a4e82a6984e2a935ae, type: 3}
+  - {fileID: 8300000, guid: 41ea318a57d2b4342a6e944abbcbed20, type: 3}
