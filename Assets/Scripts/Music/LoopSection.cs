@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LoopSection : MonoBehaviour {
     public List<LoopRecording> recordings;
+    private int recordingIDCounter, maxRecordingIDCounter = 30;
 
     private void Awake() {
         if (recordings == null) recordings = new List<LoopRecording>();
@@ -44,5 +45,13 @@ public class LoopSection : MonoBehaviour {
         }
 
         Destroy(this);
+    }
+
+    public string GetNewRecordingID() {
+        // Range of [1..maxIDCounter]
+        int newID = (recordingIDCounter % maxRecordingIDCounter) + 1;
+        recordingIDCounter++;
+
+        return $"{newID}";
     }
 }
