@@ -33,7 +33,7 @@ public abstract class ObjectPool : MonoBehaviour {
         GameObject newObject;
 
         for (int i = 0; i < initialPoolSize; i++) {
-            newObject = Instantiate(prefab);
+            newObject = Instantiate(prefab, transform); // Optional: Do not instantiate under this transform, for performance reasons.
             newObject.SetActive(false);
             pool.Add(newObject);
         }

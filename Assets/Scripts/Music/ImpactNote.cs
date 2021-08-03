@@ -9,6 +9,7 @@ using UnityEngine;
 /// </summary>
 public class ImpactNote : BaseNote {
     public Transform sourcePositionOverride;
+
     public override void PlayNote() {
         ImpactNoteSource impactNoteSource = noteSource as ImpactNoteSource;
         if (impactNoteSource) {

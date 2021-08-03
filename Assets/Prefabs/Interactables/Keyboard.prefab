@@ -133,10 +133,70 @@ PrefabInstance:
       propertyPath: octave
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2635221608582969276, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974709266349248702, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487534213020681576, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023948343489650832, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260628452623262120, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591493484327384089, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784461138383946613, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831186760760851239, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191217101985250686, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243687200834753450, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275583918384754212, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7364982449067905379, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
         type: 3}
       propertyPath: m_Name
       value: Octave 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520990160004302399, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7889880110707084249, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
         type: 3}
@@ -208,10 +268,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4945981493556000033}
     m_Modifications:
+    - target: {fileID: 2635221608582969276, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974709266349248702, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487534213020681576, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023948343489650832, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260628452623262120, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591493484327384089, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784461138383946613, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831186760760851239, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191217101985250686, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243687200834753450, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275583918384754212, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7364982449067905379, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
         type: 3}
       propertyPath: m_Name
       value: Octave 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520990160004302399, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7889880110707084249, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
         type: 3}
@@ -331,10 +451,70 @@ PrefabInstance:
       propertyPath: octave
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2635221608582969276, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974709266349248702, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487534213020681576, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023948343489650832, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260628452623262120, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591493484327384089, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784461138383946613, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831186760760851239, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191217101985250686, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243687200834753450, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275583918384754212, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7364982449067905379, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
         type: 3}
       propertyPath: m_Name
       value: Octave 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7520990160004302399, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7889880110707084249, guid: c0dbfdb1f22e4c144af5818575a7a6f6,
         type: 3}

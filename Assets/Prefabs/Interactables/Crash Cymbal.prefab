@@ -207,6 +207,7 @@ MonoBehaviour:
   playTime: 0
   stopTime: 0
   velocity: 0
+  sourcePositionOverride: {fileID: 0}
 --- !u!114 &2091489808494548872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 5a2a6d224d401334ea9a4f371a8a0ddd,
         type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5a2a6d224d401334ea9a4f371a8a0ddd,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b54f7d74344345040b6931eca628bbfe, type: 2}
@@ -382,7 +388,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 60e90527e5f0b2b46a840f2839d66a98,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60e90527e5f0b2b46a840f2839d66a98,
         type: 3}
@@ -427,6 +433,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 60e90527e5f0b2b46a840f2839d66a98,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 60e90527e5f0b2b46a840f2839d66a98,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 60e90527e5f0b2b46a840f2839d66a98,

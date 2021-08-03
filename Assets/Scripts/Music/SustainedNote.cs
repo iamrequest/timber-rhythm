@@ -66,7 +66,11 @@ public class SustainedNote: BaseNote {
             StopCoroutine(stopPlayingAudioCoroutine);
         }
 
-        audioSource = AudioSourceObjectPool.Instance.GetAudioSourceFromPool();
+        if (!audioSource) {
+            // Don't bother fetching a new audio source if we're in the release phase of the note
+            audioSource = AudioSourceObjectPool.Instance.GetAudioSourceFromPool();
+        }
+
         if (audioSource) {
             audioSource.loop = true;
             audioSource.volume = 0f; // Setting this to prevent weird clicking noise at the beginning of the audio
