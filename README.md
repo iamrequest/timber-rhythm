@@ -66,7 +66,7 @@ From here, I created a script, [formatNoteFileNames.sh](./Assets/SFX/notes/forma
 
 ### Using ScriptableObjects to store Sustained Note references
 
-I created a ScriptableObject ([OctaveNoteCollection](./Assets/ScriptableObjects/OctaveNoteCollection.cs]) to store entire octaves worth of notes, and a second ScriptableObject ([SustainedNoteSoundLibrary](./Assets/ScriptableObjects/SustainedNoteSoundLibrary.cs)) to store a list of octaves (as well as some metadata about the instrument. At this point, each note would only need a reference to the sound library, the octave index, and the name of the note. 
+I created a ScriptableObject ([OctaveNoteCollection](./Assets/ScriptableObjects/OctaveNoteCollection.cs)) to store entire octaves worth of notes, and a second ScriptableObject ([SustainedNoteSoundLibrary](./Assets/ScriptableObjects/SustainedNoteSoundLibrary.cs)) to store a list of octaves (as well as some metadata about the instrument. At this point, each note would only need a reference to the sound library, the octave index, and the name of the note. 
 
 Between this, and the above SFX generation strategy, creating new keyboard presets was very quick.
 
