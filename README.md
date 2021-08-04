@@ -32,20 +32,20 @@ The main goals going into this project were:
 
 This is the core of the project. The loop machine can be separated into the following layers:
 
-	1. The Loop Machine
-		- Responsible for play/pause/stop/record interface.
-		- Stores tempo and time signature info
-		- Handles the metronome
-	1. Sections
-		- This stores a list of recordings.
-		- The idea here would be that the player could record multiple sections (eg: verse, chorus), and switch between them on the fly.
-		- Between a lack of time, and space on the UI, I ended up just using one recording section for everything.
-	1. Recordings
-		- This represents a single cycle worth of recorded notes.
-		- The recording is responsible for playing all notes that occur between the previous frame, and this frame.
-		- Entire recordings can be optionally muted
-	1. Notes
-		- These can be broken down into Impact Notes (one-shot, eg: drum kit), or Sustained Notes (play indefinitely until some stopping condition is met, eg: keyboard key)
+1. The Loop Machine
+	- Responsible for play/pause/stop/record interface.
+	- Stores tempo and time signature info
+	- Handles the metronome
+1. Sections
+	- This stores a list of recordings.
+	- The idea here would be that the player could record multiple sections (eg: verse, chorus), and switch between them on the fly.
+	- Between a lack of time, and space on the UI, I ended up just using one recording section for everything.
+1. Recordings
+	- This represents a single cycle worth of recorded notes.
+	- The recording is responsible for playing all notes that occur between the previous frame, and this frame.
+	- Entire recordings can be optionally muted
+1. Notes
+	- These can be broken down into Impact Notes (one-shot, eg: drum kit), or Sustained Notes (play indefinitely until some stopping condition is met, eg: keyboard key)
 
 
 ### The Loop Machine: Recording and Replaying Notes
@@ -56,6 +56,11 @@ The loop machine iterates through a single cycle via time t, in the range [0, 1]
 ### Recording note samples, and formatting the filenames for ease of use
 
 As of version 1.1.0, there's 180 SFX clips used for sustained notes. That's 12 notes per octave, 3 octaves per keyboard, over 5 keyboard presets. Using Reaper, I generated made a parent track with the VST instrument. Under that track, I added 12 new tracks, each playing a single note of an entire octave. These tracks were all rendered in one export step, each rendering to a separate file.
+
+<p align="center">
+    <img src="./readmeContents/reaper-01.png">
+    <img src="./readmeContents/reaper-02.png">
+</p>
 
 From here, I created a script, formatNoteFileNames.sh, which would rename these files into something more manageable. The new filenames would include the name of the preset, the octave of the note, an integer from [0, 11] that indicates the note, and the actual name of the note (eg: "triangle-3-0-C.ogg" would be a C3 triangle note).
 
