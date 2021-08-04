@@ -62,11 +62,11 @@ As of version 1.1.0, there's 180 SFX clips used for sustained notes. That's 12 n
     <img src="./readmeContents/reaper-02.png">
 </p>
 
-From here, I created a script, formatNoteFileNames.sh, which would rename these files into something more manageable. The new filenames would include the name of the preset, the octave of the note, an integer from [0, 11] that indicates the note, and the actual name of the note (eg: "triangle-3-0-C.ogg" would be a C3 triangle note).
+From here, I created a script, [formatNoteFileNames.sh](./Assets/SFX/notes/formatNoteFileNames.sh), which would rename these files into something more manageable. The new filenames would include the name of the preset, the octave of the note, an integer from [0, 11] that indicates the note, and the actual name of the note (eg: "triangle-3-0-C.ogg" would be a C3 triangle note).
 
-### Using ScriptableObjects to store note references
+### Using ScriptableObjects to store Sustained Note references
 
-I created a ScriptableObject (Octave) to store entire octaves worth of notes, and a second ScriptableObject (SoundLibrary) to store a list of octaves (as well as some metadata about the instrument. At this point, each note would only need a reference to the sound library, the octave index, and the name of the note. 
+I created a ScriptableObject ([OctaveNoteCollection](./Assets/ScriptableObjects/OctaveNoteCollection.cs]) to store entire octaves worth of notes, and a second ScriptableObject ([SustainedNoteSoundLibrary](./Assets/ScriptableObjects/SustainedNoteSoundLibrary.cs)) to store a list of octaves (as well as some metadata about the instrument. At this point, each note would only need a reference to the sound library, the octave index, and the name of the note. 
 
 Between this, and the above SFX generation strategy, creating new keyboard presets was very quick.
 
