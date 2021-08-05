@@ -97,6 +97,16 @@ Currently, everything is recorded and played via a single section. The infrastru
 It'd be nice for the player to be able to queue up a section, so that it plays after the current cycle. This way, there's a smooth transition from the current section to the next. Maybe the player could drag/drop sections into some slot to make this happen?
 
 
+## Project Settings 
+
+- Unity 2019.4.24f1
+- Universal Render Pipeline (7.5.3)
+- OpenVR Desktop (2.0.5)
+- SteamVR (2.7.3, sdk 1.14.15)
+- TextMesh Pro (2.1.4)
+- Visual Effect Graph (7.5.3)
+- Hurricane VR (2.1)
+
 ## Third-Party Credits
 
 Third Party Assets
