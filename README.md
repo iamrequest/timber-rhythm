@@ -84,14 +84,36 @@ The buttons were made using Hurricane VR's HVRPhysicsButton script. These were v
 
 The gold standard that I was aiming for with the drums in my game was to have the drumsticks bounce off of the drum, based on the velocity of the collision. This would make rolls and drags possible. This is something that I briefly tested a while ago, via adding torque to the drum stick's rigidbody on collision, but I ended up not having the time for it. I believe it may not be possible with the base Hurricane VR prefab, but it may be possible with the HurricaneVR + Hexabody prefab, due to how the physics hands are implemented. This is something that I need more testing on to confirm - I believe I tested this concept using the HurricaneVR+Hexabody rig, 
 
-### Better recording
+### Better recording, and recording playback
 
 It's pretty easy to mess up the timing of your notes. I'd like to implement some note-snapping functionality, where the note's start time t value gets rounded to the nearest quarter/eighth note's time t value.
 
-It'd also be nice to be able to solo certain recordings. This was also cut due to a lack of time and UI space.
+It'd also be nice to be able to solo certain recordings, and adjust each individual recording's volume. This was also cut due to a lack of time and UI space.
 
 ### Section Swapping
 
 Currently, everything is recorded and played via a single section. The infrastructure to play/record with other sections is functional, but it needs to be hooked up to the UI. This was another thing cut due to a lack of UI space. Maybe I need to add tabs to the loop machine?
 
 It'd be nice for the player to be able to queue up a section, so that it plays after the current cycle. This way, there's a smooth transition from the current section to the next. Maybe the player could drag/drop sections into some slot to make this happen?
+
+
+## Third-Party Credits
+
+Third Party Assets
+
+Asset|Author|License
+-|-|-
+[Press Start 2P Font](https://www.fontspace.com/press-start-2p-font-f11591)|codeman38|[SIL Open Font License (OFL)](https://www.fontspace.com/help#license-17)
+[UI Pack: Space Expansion](https://kenney.nl/assets/ui-pack-space-expansion)|Kenney|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
+[Game Icons](https://kenney.nl/assets/game-icons)|Kenney|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
+[Game Icons (Expansion)](https://kenney.nl/assets/game-icons-expansion)|Kenney|[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
+[Audio generated using Magical 8bit 2](https://ymck.net/app/magical-8bit-plug-en/) ([github](https://github.com/yokemura/Magical8bitPlug2))|Yokemura @ YMCK|[GPL-3.0 License](https://github.com/yokemura/Magical8bitPlug2/blob/develop/LICENSE)
+[MathFS](https://github.com/FreyaHolmer/Mathfs)|Freya Holmér|[MIT License](https://github.com/FreyaHolmer/Mathfs/blob/master/LICENSE.txt)
+
+Unity Assets
+
+Asset|Author
+-|-
+[SteamVR Plugin](https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647)|Valve
+[HurricaneVR](https://assetstore.unity.com/packages/tools/physics/hurricane-vr-physics-interaction-toolkit-177300)|Cloudwalkin Games
+
