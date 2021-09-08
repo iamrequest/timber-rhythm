@@ -70,6 +70,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /[Aa]ssets/[Uu]nity/
 
+# Don't commit baked lightmaps (this can be generated, and it takes up too much space in the repo)
+Assets/Scenes/Forest/ 
 
 # -- Custom dir ignores
 # Builds and project images

@@ -2,18 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Freya;
 
 
 [RequireComponent(typeof(HVRGrabbable))]
 public class DrumStick : MonoBehaviour {
     private HVRGrabbable grabbable;
     public Transform tip;
-    public Vector3 v;
 
-    [Range(0f, 1000f)]
+    [Range(0f, 10)]
     public float maxForce;
     public ForceMode forceMode;
-    public bool applyForceToHand;
 
     private void Awake() {
         grabbable = GetComponent<HVRGrabbable>();
@@ -21,13 +20,11 @@ public class DrumStick : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         if (grabbable.IsBeingHeld) {
-            v = tip.position - grabbable.HandGrabbers[0].transform.position;
+            Vector3 v = tip.position - grabbable.HandGrabbers[0].transform.position;
+            v = Vector3.Cross(v, collision.contacts[0].normal);
+            float force = Mathfs.LerpClamped(0f, maxForce, collision.relativeVelocity.magnitude);
 
-            if (applyForceToHand) {
-                grabbable.HandGrabbers[0].Rigidbody.AddTorque(v.normalized * maxForce, forceMode);
-            } else {
-                grabbable.Rigidbody.AddTorque(v.normalized * maxForce, forceMode);
-            }
+            grabbable.HandGrabbers[0].Rigidbody.AddTorque(v.normalized * force, forceMode);
         } else {
             Debug.Log("Not grabbed");
         }
